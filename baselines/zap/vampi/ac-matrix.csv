@@ -1,0 +1,15 @@
+method,url,<< Unauthenticated >>::authorized,alice1::authorized,bob2::authorized,carol3::authorized,<< Unauthenticated >>::result,alice1::result,bob2::result,carol3::result
+PUT,http://127.0.0.1:5002/users/v1/carol3/email,No,Yes,Yes,Yes,Valid,Invalid,Invalid,Valid
+GET,http://127.0.0.1:5002/users/v1/alice1,Yes,Yes,Yes,Yes,Valid,Valid,Valid,Valid
+GET,http://127.0.0.1:5002/users/v1/bob2,Yes,Yes,Yes,Yes,Valid,Valid,Valid,Valid
+PUT,http://127.0.0.1:5002/users/v1/bob2/password,No,Yes,Yes,Yes,Valid,Invalid,Valid,Invalid
+PUT,http://127.0.0.1:5002/users/v1/carol3/password,No,Yes,Yes,Yes,Valid,Invalid,Invalid,Valid
+PUT,http://127.0.0.1:5002/users/v1/alice1/email,No,Yes,Yes,Yes,Valid,Valid,Invalid,Invalid
+PUT,http://127.0.0.1:5002/users/v1/alice1/password,No,Yes,Yes,Yes,Valid,Valid,Invalid,Invalid
+PUT,http://127.0.0.1:5002/users/v1/bob2/email,No,Yes,Yes,Yes,Valid,Invalid,Valid,Invalid
+GET,http://127.0.0.1:5002/books/v1/alice1-notebook,No,Yes,Yes,Yes,Valid,Valid,Invalid,Invalid
+GET,http://127.0.0.1:5002/books/v1/carol3-notebook,No,Yes,Yes,Yes,Valid,Invalid,Invalid,Valid
+GET,http://127.0.0.1:5002/users/v1/carol3,Yes,Yes,Yes,Yes,Valid,Valid,Valid,Valid
+GET,http://127.0.0.1:5002/books/v1/soft-del-probe,No,Yes,Yes,Yes,Valid,Valid,Valid,Valid
+GET,http://127.0.0.1:5002/,Yes,Yes,Yes,Yes,Unknown,Unknown,Unknown,Unknown
+GET,http://127.0.0.1:5002/books/v1/bob2-notebook,No,Yes,Yes,Yes,Valid,Invalid,Valid,Invalid

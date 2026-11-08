@@ -1,0 +1,52 @@
+{
+  "source": "results/processed/zap_baseline.json + bench/labels/*.jsonl",
+  "attribution": "paper/empirical_draft.md Table 12 (manual analysis)",
+  "totals": {
+    "fp_f2": 3,
+    "fp_f5": 11,
+    "miss_f3": 21
+  },
+  "f7_note": "F7 is a mechanism, not a separate count: 3 extra mock FPs before the _drain_body fixture fix (5 -> 2), already excluded from post-fix counts.",
+  "rows": [
+    {
+      "system": "mock",
+      "display": "MockShop-vuln",
+      "vulnerable": 32,
+      "tested_vulnerable": 17,
+      "fp_total": 2,
+      "fp_f2": 1,
+      "fp_f5": 1,
+      "miss_f3": 15
+    },
+    {
+      "system": "clean",
+      "display": "MockShop-secure",
+      "vulnerable": 0,
+      "tested_vulnerable": 0,
+      "fp_total": 6,
+      "fp_f2": 2,
+      "fp_f5": 4,
+      "miss_f3": 0
+    },
+    {
+      "system": "crapi",
+      "display": "OWASP crAPI",
+      "vulnerable": 24,
+      "tested_vulnerable": 18,
+      "fp_total": 3,
+      "fp_f2": 0,
+      "fp_f5": 3,
+      "miss_f3": 6
+    },
+    {
+      "system": "vampi",
+      "display": "VAmPI",
+      "vulnerable": 6,
+      "tested_vulnerable": 6,
+      "fp_total": 3,
+      "fp_f2": 0,
+      "fp_f5": 3,
+      "miss_f3": 0
+    }
+  ]
+}

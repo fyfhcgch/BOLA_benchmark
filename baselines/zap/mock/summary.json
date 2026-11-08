@@ -1,0 +1,422 @@
+{
+  "system": "mock",
+  "victim": "alice",
+  "attackers": [
+    "bob",
+    "carol"
+  ],
+  "zap_version": "2.17.0",
+  "context": "bola-mock",
+  "context_id": "3",
+  "user_ids": {
+    "alice": "2847",
+    "bob": "2848",
+    "carol": "2849"
+  },
+  "seeded_urls": 41,
+  "urls_in_context": 43,
+  "site_nodes": 59,
+  "rules_injected": 160,
+  "rules_check": {
+    "ALLOWED": 44,
+    "DENIED": 116
+  },
+  "injected": {
+    "old_context_id": "2",
+    "context_id": "3",
+    "exported_bytes": 6539,
+    "rules_injected": 160
+  },
+  "scan": {
+    "status": "NOT RUNNING",
+    "progress": "100"
+  },
+  "by_user_results": {
+    "<< Unauthenticated >>": {
+      "Unknown": 6,
+      "Valid": 27
+    },
+    "alice": {
+      "Unknown": 6,
+      "Valid": 20,
+      "Invalid": 7
+    },
+    "bob": {
+      "Unknown": 6,
+      "Invalid": 10,
+      "Valid": 17
+    },
+    "carol": {
+      "Unknown": 6,
+      "Invalid": 11,
+      "Valid": 16
+    }
+  },
+  "alerts_total": 85,
+  "ac_alerts": 38,
+  "ac_authz_alerts": 38,
+  "ac_alerts_by_name": {
+    "Access Control Issue - Improper Authorization": 38
+  },
+  "passive_alerts": 47,
+  "report_saved": true,
+  "fixture_before": "reset",
+  "fixture_after": "reset",
+  "notes": [
+    "newSession：每轮从空站点树/空告警开始"
+  ],
+  "score": {
+    "labels_total": 50,
+    "labels_tested": 30,
+    "labels_uncovered": 20,
+    "coverage": 0.6,
+    "tp": 17,
+    "fp": 2,
+    "fn": 0,
+    "tn": 11,
+    "fp_unlabeled": 0,
+    "gate_violations": 0,
+    "tests_total": 118,
+    "tests_skipped_owner": 25,
+    "self_read_alerts": 0,
+    "precision_defined": true,
+    "precision": 0.8947,
+    "fp_rate": 0.1538,
+    "safe_tested": 13,
+    "recall": 1.0,
+    "recall_strict": 0.5312,
+    "f1": 0.9444,
+    "tp_keys": [
+      [
+        "GET",
+        "/api/orders/{id}",
+        [
+          "1005"
+        ]
+      ],
+      [
+        "PATCH",
+        "/api/orders/{id}",
+        [
+          "1003"
+        ]
+      ],
+      [
+        "POST",
+        "/api/orders/batch",
+        [
+          "1001",
+          "1002"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}",
+        [
+          "1002"
+        ]
+      ],
+      [
+        "GET",
+        "/api/users/{id}/orders",
+        [
+          "1"
+        ]
+      ],
+      [
+        "GET",
+        "/api/documents/{uuid}/trash",
+        [
+          "b1b2c3d4-0003-4000-8000-000000000003"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}",
+        [
+          "1001"
+        ]
+      ],
+      [
+        "PATCH",
+        "/api/orders/{id}",
+        [
+          "1004"
+        ]
+      ],
+      [
+        "PATCH",
+        "/api/orders/{id}",
+        [
+          "1005"
+        ]
+      ],
+      [
+        "PATCH",
+        "/api/orders/{id}",
+        [
+          "1002"
+        ]
+      ],
+      [
+        "GET",
+        "/api/documents/{uuid}/trash",
+        [
+          "a1b2c3d4-0001-4000-8000-000000000001"
+        ]
+      ],
+      [
+        "PATCH",
+        "/api/orders/{id}",
+        [
+          "1001"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}",
+        [
+          "1003"
+        ]
+      ],
+      [
+        "GET",
+        "/api/users/{id}/orders",
+        [
+          "3"
+        ]
+      ],
+      [
+        "GET",
+        "/api/users/{id}/orders",
+        [
+          "2"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}",
+        [
+          "1004"
+        ]
+      ],
+      [
+        "GET",
+        "/api/documents/{uuid}/trash",
+        [
+          "c1b2c3d4-0005-4000-8000-000000000005"
+        ]
+      ]
+    ],
+    "fn_keys": [],
+    "tn_keys": [
+      [
+        "GET",
+        "/api/orders/{id}/items",
+        [
+          "1004"
+        ]
+      ],
+      [
+        "GET",
+        "/api/documents/{uuid}",
+        [
+          "c1b2c3d4-0005-4000-8000-000000000005"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}/items",
+        [
+          "1005"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}/items",
+        [
+          "1002"
+        ]
+      ],
+      [
+        "GET",
+        "/api/documents/{uuid}",
+        [
+          "b1b2c3d4-0003-4000-8000-000000000003"
+        ]
+      ],
+      [
+        "GET",
+        "/api/profile/{id}",
+        [
+          "3"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}/items",
+        [
+          "1001"
+        ]
+      ],
+      [
+        "GET",
+        "/api/profile/{id}",
+        [
+          "2"
+        ]
+      ],
+      [
+        "GET",
+        "/api/documents/{uuid}",
+        [
+          "a1b2c3d4-0001-4000-8000-000000000001"
+        ]
+      ],
+      [
+        "GET",
+        "/api/profile/{id}",
+        [
+          "1"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/{id}/items",
+        [
+          "1003"
+        ]
+      ]
+    ],
+    "fp_labeled_keys": [
+      [
+        "POST",
+        "/api/orders/batch/mine",
+        [
+          "1001",
+          "1002"
+        ]
+      ],
+      [
+        "GET",
+        "/api/documents/{uuid}/trash",
+        [
+          "a1b2c3d4-0002-4000-8000-000000000002"
+        ]
+      ]
+    ],
+    "fp_unlabeled_records": [],
+    "gate_violation_records": [],
+    "uncovered_vuln_keys": [
+      [
+        "DELETE",
+        "/api/orders/{id}",
+        [
+          "1001"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/orders/{id}",
+        [
+          "1002"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/orders/{id}",
+        [
+          "1003"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/orders/{id}",
+        [
+          "1004"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/orders/{id}",
+        [
+          "1005"
+        ]
+      ],
+      [
+        "POST",
+        "/api/orders/batch",
+        [
+          "1003",
+          "1004"
+        ]
+      ],
+      [
+        "POST",
+        "/api/orders/batch",
+        [
+          "1005"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/export",
+        [
+          "1001",
+          "1002"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/export",
+        [
+          "1003",
+          "1004"
+        ]
+      ],
+      [
+        "GET",
+        "/api/orders/export",
+        [
+          "1005"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/documents/{uuid}",
+        [
+          "a1b2c3d4-0001-4000-8000-000000000001"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/documents/{uuid}",
+        [
+          "a1b2c3d4-0002-4000-8000-000000000002"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/documents/{uuid}",
+        [
+          "b1b2c3d4-0003-4000-8000-000000000003"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/documents/{uuid}",
+        [
+          "b1b2c3d4-0004-4000-8000-000000000004"
+        ]
+      ],
+      [
+        "DELETE",
+        "/api/documents/{uuid}",
+        [
+          "c1b2c3d4-0005-4000-8000-000000000005"
+        ]
+      ]
+    ]
+  },
+  "out": "baselines/zap/mock"
+}

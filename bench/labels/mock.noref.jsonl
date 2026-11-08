@@ -1,0 +1,2 @@
+{"method": "GET", "path": "/api/products", "note": "公开数据，无对象标识；任何告警都是闸门失效"}
+{"method": "GET", "path": "/api/me", "note": "只返回自身，无对象标识；重放只会拿到攻击者自己的数据"}

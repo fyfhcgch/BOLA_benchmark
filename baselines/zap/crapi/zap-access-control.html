@@ -1,0 +1,161 @@
+<!DOCTYPE html><html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>ZAP Access Control Report</title>
+        <style>
+					#table{width:100%;border:0;font-family:Arial,Helvetica,sans-serif;margin:
+					10px 0px;}#table
+					thead
+					th{background-color:#6D929B;font-weight:700;color:#FFF;font-size:13px;padding:7px
+					10px;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#table
+					tr{font-size:.8em;color:#446}#table
+					tr:nth-of-type(odd){background:#D6EDEF}#table
+					td{padding:5px}th.sort-header{cursor:pointer}th.sort-header::-moz-selection,th.sort-header::selection{background:0
+					0}table
+					th.sort-header:after{content:'';float:right;margin-top:7px;border-width:0
+					4px 4px;border-style:solid;border-color:#fff
+					transparent;visibility:hidden}table
+					th.sort-header:hover:after{visibility:visible}table
+					th.sort-down:after,table th.sort-down:hover:after,table
+					th.sort-up:after{visibility:visible;opacity:.6}table
+					th.sort-up:after{border-bottom:none;border-width:4px 4px 0}</style>
+    </head>
+    <body>
+        <h1>ZAP Access Control Report</h1>
+        <button onclick="showAll()">Show All</button><button onclick="showIllegal()">Show Illegal</button><button onclick="showLegal()">Show Valid</button><input type="search" class="light-table-filter" data-table="rules-table" placeholder="Filter by text">
+        <table id="table" class="rules-table">
+            <thead>
+                <tr>
+                    <th></th><th></th><th colspan="2">&lt;&lt; Unauthenticated &gt;&gt;</th><th colspan="2">alice</th><th colspan="2">bob</th><th colspan="2">carol</th>
+                </tr>
+                <tr>
+                    <th>Method</th><th>URL</th><th>Authorized?</th><th>Access Control</th><th>Authorized?</th><th>Access Control</th><th>Authorized?</th><th>Access Control</th><th>Authorized?</th><th>Access Control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677/location">http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677/location</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/merchant/service_requests/11ZU9TJW463655KZ1">http://127.0.0.1:8888/workshop/api/merchant/service_requests/11ZU9TJW463655KZ1</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/">http://127.0.0.1:8888/</a></td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td>
+                </tr>
+                <tr>
+                    <td>POST</td><td><a href="http://127.0.0.1:8888/identity/api/auth/verify">http://127.0.0.1:8888/identity/api/auth/verify</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/service_request/6/comment">http://127.0.0.1:8888/workshop/api/mechanic/service_request/6/comment</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/merchant/service_requests/3XXT60864E93Z0BS4">http://127.0.0.1:8888/workshop/api/merchant/service_requests/3XXT60864E93Z0BS4</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>POST</td><td><a href="http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W/comment">http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W/comment</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a/location">http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a/location</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W">http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/mechanic_report?report_id=8">http://127.0.0.1:8888/workshop/api/mechanic/mechanic_report?report_id=8</a></td><td>No</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/service_request/7/comment">http://127.0.0.1:8888/workshop/api/mechanic/service_request/7/comment</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9/location">http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9/location</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic">http://127.0.0.1:8888/workshop/api/mechanic</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/identity/api/v2/vehicle/vehicles">http://127.0.0.1:8888/identity/api/v2/vehicle/vehicles</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/identity/api/v2/user/videos/0">http://127.0.0.1:8888/identity/api/v2/user/videos/0</a></td><td>No</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/service_request/6">http://127.0.0.1:8888/workshop/api/mechanic/service_request/6</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/service_request/7">http://127.0.0.1:8888/workshop/api/mechanic/service_request/7</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>POST</td><td><a href="http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG/comment">http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG/comment</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/service_request/8/comment">http://127.0.0.1:8888/workshop/api/mechanic/service_request/8/comment</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/chatbot/genai/state">http://127.0.0.1:8888/chatbot/genai/state</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/">http://127.0.0.1:8888/workshop/api/mechanic/</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/service_request/8">http://127.0.0.1:8888/workshop/api/mechanic/service_request/8</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/products?limit=30&amp;offset=0">http://127.0.0.1:8888/workshop/api/shop/products?limit=30&amp;offset=0</a></td><td>No</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td>
+                </tr>
+                <tr>
+                    <td>POST</td><td><a href="http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG/comment">http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG/comment</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG">http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/null">http://127.0.0.1:8888/workshop/api/shop/orders/null</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/11">http://127.0.0.1:8888/workshop/api/shop/orders/11</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/10">http://127.0.0.1:8888/workshop/api/shop/orders/10</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/identity/api/v2/user/dashboard">http://127.0.0.1:8888/identity/api/v2/user/dashboard</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/community/api/v2/community/posts/recent?limit=30&amp;offset=0">http://127.0.0.1:8888/community/api/v2/community/posts/recent?limit=30&amp;offset=0</a></td><td>No</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td>
+                </tr>
+                <tr>
+                    <td>POST</td><td><a href="http://127.0.0.1:8888/identity/api/auth/login">http://127.0.0.1:8888/identity/api/auth/login</a></td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG">http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG</a></td><td>No</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="VALID">Valid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/all?limit=30&amp;offset=0">http://127.0.0.1:8888/workshop/api/shop/orders/all?limit=30&amp;offset=0</a></td><td>No</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/merchant/service_requests/9N6L4W48LEC91XD38">http://127.0.0.1:8888/workshop/api/merchant/service_requests/9N6L4W48LEC91XD38</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/9">http://127.0.0.1:8888/workshop/api/shop/orders/9</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/8">http://127.0.0.1:8888/workshop/api/shop/orders/8</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/7">http://127.0.0.1:8888/workshop/api/shop/orders/7</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/shop/orders/6">http://127.0.0.1:8888/workshop/api/shop/orders/6</a></td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="VALID">Valid</td><td>Yes</td><td class="ILLEGAL">Invalid</td><td>Yes</td><td class="ILLEGAL">Invalid</td>
+                </tr>
+                <tr>
+                    <td>GET</td><td><a href="http://127.0.0.1:8888/workshop/api/mechanic/download_report?filename=report_8">http://127.0.0.1:8888/workshop/api/mechanic/download_report?filename=report_8</a></td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td><td>Yes</td><td class="UNKNOWN">Unknown</td>
+                </tr>
+            </tbody>
+        </table>
+        				
+				<script>
+					function showAll(){var e=document.getElementById("table");for(var t=2;t<e.rows.length;t++){e.rows[t].style.display=""}}function showIllegal(){var e=document.getElementById("table");for(var t=2;t<e.rows.length;t++){var n=e.rows[t];e.rows[t].style.display="none";for(var r=3;r<n.cells.length;r+=2){if(n.cells[r].className==="ILLEGAL")e.rows[t].style.display=""}}}function showLegal(){var e=document.getElementById("table");for(var t=2;t<e.rows.length;t++){var n=e.rows[t];e.rows[t].style.display="";for(var r=3;r<n.cells.length;r+=2){if(n.cells[r].className==="ILLEGAL")e.rows[t].style.display="none"}}}(function(){function e(e,t){if(e.tagName!=="TABLE"){throw new Error("Element must be a table")}this.init(e,t||{})}e.prototype={init:function(e,t){var n=this,r;this.thead=false;this.options=t;this.options.d=t.descending||false;if(e.rows&&e.rows.length>0){if(e.tHead&&e.tHead.rows.length>0){r=e.tHead.rows[e.tHead.rows.length-1];n.thead=true}else{r=e.rows[0]}}if(!r){return}var i=function(e){var t=o(u,"tr").getElementsByTagName("th");for(var r=0;r<t.length;r++){if(c(t[r],"sort-up")||c(t[r],"sort-down")){if(t[r]!==this){t[r].className=t[r].className.replace(" sort-down","").replace(" sort-up","")}}}n.current=this;n.sortTable(this)};for(var s=0;s<r.cells.length;s++){var u=r.cells[s];if(!c(u,"no-sort")){u.className+=" sort-header";h(u,"click",i)}}},getFirstDataRowIndex:function(){if(!this.thead){return 1}else{return 0}},sortTable:function(e,t){var n=this,r=e.cellIndex,h,p=o(e,"table"),d="",v=n.getFirstDataRowIndex();if(p.rows.length<=1)return;while(d===""&&v<p.tBodies[0].rows.length){d=u(p.tBodies[0].rows[v].cells[r]);d=f(d);if(d.substr(0,4)==="<!--"||d.length===0){d=""}v++}if(d==="")return;var m=function(e,t){var r=u(e.cells[n.col]).toLowerCase(),i=u(t.cells[n.col]).toLowerCase();if(r===i)return 0;if(r<i)return 1;return-1};var g=function(e,t){var r=u(e.cells[n.col]),i=u(t.cells[n.col]);r=l(r);i=l(i);return a(i,r)};var y=function(e,t){var r=u(e.cells[n.col]).toLowerCase(),i=u(t.cells[n.col]).toLowerCase();return s(i)-s(r)};if(d.match(/^-?[£\x24Û¢´â¬] ?\d/)||d.match(/^-?\d+\s*[â¬]/)||d.match(/^-?(\d+[,\.]?)+(E[\-+][\d]+)?%?$/)){h=g}else if(i(d)){h=y}else{h=m}this.col=r;var b=[],w={},E,S=0;for(v=0;v<p.tBodies.length;v++){for(E=0;E<p.tBodies[v].rows.length;E++){var x=p.tBodies[v].rows[E];if(c(x,"no-sort")){w[S]=x}else{b.push({tr:x,index:S})}S++}}if(!t){if(n.options.d){if(c(e,"sort-up")){e.className=e.className.replace(/ sort-up/,"");e.className+=" sort-down"}else{e.className=e.className.replace(/ sort-down/,"");e.className+=" sort-up"}}else{if(c(e,"sort-down")){e.className=e.className.replace(/ sort-down/,"");e.className+=" sort-up"}else{e.className=e.className.replace(/ sort-up/,"");e.className+=" sort-down"}}}var T=function(e){return function(t,n){var r=e(t.tr,n.tr);if(r===0){return t.index-n.index}return r}};var N=function(e){return function(t,n){var r=e(t.tr,n.tr);if(r===0){return n.index-t.index}return r}};if(c(e,"sort-down")){b.sort(N(h));b.reverse()}else{b.sort(T(h))}var C=0;for(v=0;v<S;v++){var k;if(w[v]){k=w[v];C++}else{k=b[v-C].tr}p.tBodies[0].appendChild(k)}},refresh:function(){if(this.current!==undefined){this.sortTable(this.current,true)}}};var t=/(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\.?\,?\s*/i,n=/\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/,r=/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)/i;var i=function(e){return(e.search(t)!==-1||e.search(n)!==-1||e.search(r!==-1))!==-1&&!isNaN(s(e))},s=function(e){e=e.replace(/\-/g,"/");e=e.replace(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2})/,"$1/$2/$3");return(new Date(e)).getTime()},o=function(e,t){if(e===null){return null}else if(e.nodeType===1&&e.tagName.toLowerCase()===t.toLowerCase()){return e}else{return o(e.parentNode,t)}},u=function(e){var t=this;if(typeof e==="string"||typeof e==="undefined"){return e}var n=e.getAttribute("data-sort")||"";if(n){return n}else if(e.textContent){return e.textContent}else if(e.innerText){return e.innerText}var r=e.childNodes,i=r.length;for(var s=0;s<i;s++){switch(r[s].nodeType){case 1:n+=t.getInnerText(r[s]);break;case 3:n+=r[s].nodeValue;break}}return n},a=function(e,t){var n=parseFloat(e),r=parseFloat(t);e=isNaN(n)?0:n;t=isNaN(r)?0:r;return e-t},f=function(e){return e.replace(/^\s+|\s+$/g,"")},l=function(e){return e.replace(/[^\-?0-9.]/g,"")},c=function(e,t){return(" "+e.className+" ").indexOf(" "+t+" ")>-1},h=function(e,t,n){if(e.attachEvent){e["e"+t+n]=n;e[t+n]=function(){e["e"+t+n](window.event)};e.attachEvent("on"+t,e[t+n])}else{e.addEventListener(t,n,false)}};if(typeof module!=="undefined"&&module.exports){module.exports=e}else{window.Tablesort=e}})();new Tablesort(document.getElementById("table"));(function(e){"use strict";var t=function(t){function r(r){n=r.target;var s=e.getElementsByClassName(n.getAttribute("data-table"));t.forEach.call(s,function(e){t.forEach.call(e.tBodies,function(e){t.forEach.call(e.rows,i)})})}function i(e){var t=e.textContent.toLowerCase(),r=n.value.toLowerCase();e.style.display=t.indexOf(r)===-1?"none":"table-row"}var n;return{init:function(){var n=e.getElementsByClassName("light-table-filter");t.forEach.call(n,function(e){e.oninput=r})}}}(Array.prototype);e.addEventListener("readystatechange",function(){if(e.readyState==="complete"){t.init()}})})(document);
+				</script>
+    </body>
+</html>

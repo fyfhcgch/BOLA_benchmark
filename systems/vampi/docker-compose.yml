@@ -1,0 +1,11 @@
+# VAmPI：Flask + SQLite 的 OWASP API Top 10 靶场（纯 API，无前端）。
+# 只跑 vulnerable 实例（5002）；secure 实例留作"同一代码、不同配置"的对照。
+services:
+  vampi:
+    image: erev0s/vampi:latest
+    container_name: vampi
+    ports:
+      - "127.0.0.1:5002:5000"
+    environment:
+      - vulnerable=1
+      - tokentimetolive=3600

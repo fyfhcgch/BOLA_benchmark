@@ -1,0 +1,24 @@
+{
+  "frozen_at": "2026-11-03T11:29:50+00:00",
+  "due_at": "2026-11-06T11:29:50+00:00",
+  "hold_hours": 72,
+  "labels": 107,
+  "vuln": 62,
+  "safe": 45,
+  "systems": {
+    "mock": {
+      "sha256": "51784998d37fbbff833d1e5a3ff1e8c35cc0f2e9a1f23fa472d209e2c5e0be9f",
+      "labels": 50
+    },
+    "crapi": {
+      "sha256": "a9866c4d34ff2ecff2e4c15811bac7190c4d8610feee5e36cfe605e46b9b1a7b",
+      "labels": 45
+    },
+    "vampi": {
+      "sha256": "8228095c564f42274f44fc07fd4b704f403bec4427e00c4c48b9698f52248a4c",
+      "labels": 12
+    }
+  },
+  "frozen_sha256": "a60a3c01aafc61d2eb2231c9b218bbf82e35c1c6ef0a520a867052e31f0b5140",
+  "protocol": "72 小时后由本人盲标一遍，比对 vulnerable 字段，报 Cohen's κ"
+}

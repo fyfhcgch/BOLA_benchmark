@@ -1,0 +1,297 @@
+method,node_name,uri,template,object_ids,user,rule,policy_source,label_vulnerable
+GET,http://127.0.0.1:8888,http://127.0.0.1:8888,/,,alice,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:8888,http://127.0.0.1:8888,/,,bob,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:8888,http://127.0.0.1:8888,/,,carol,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:8888,http://127.0.0.1:8888,/,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8888/,/,,alice,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8888/,/,,bob,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8888/,/,,carol,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8888/,/,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,chatbot,http://127.0.0.1:8888/chatbot,/chatbot,,alice,UNKNOWN,unseeded-container-node,
+GET,chatbot,http://127.0.0.1:8888/chatbot,/chatbot,,bob,UNKNOWN,unseeded-container-node,
+GET,chatbot,http://127.0.0.1:8888/chatbot,/chatbot,,carol,UNKNOWN,unseeded-container-node,
+GET,chatbot,http://127.0.0.1:8888/chatbot,/chatbot,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,genai,http://127.0.0.1:8888/chatbot/genai,/chatbot/genai,,alice,UNKNOWN,unseeded-container-node,
+GET,genai,http://127.0.0.1:8888/chatbot/genai,/chatbot/genai,,bob,UNKNOWN,unseeded-container-node,
+GET,genai,http://127.0.0.1:8888/chatbot/genai,/chatbot/genai,,carol,UNKNOWN,unseeded-container-node,
+GET,genai,http://127.0.0.1:8888/chatbot/genai,/chatbot/genai,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:state,http://127.0.0.1:8888/chatbot/genai/state,/chatbot/genai/state,,alice,ALLOWED,no-object-ref,
+GET,GET:state,http://127.0.0.1:8888/chatbot/genai/state,/chatbot/genai/state,,bob,ALLOWED,no-object-ref,
+GET,GET:state,http://127.0.0.1:8888/chatbot/genai/state,/chatbot/genai/state,,carol,ALLOWED,no-object-ref,
+GET,GET:state,http://127.0.0.1:8888/chatbot/genai/state,/chatbot/genai/state,,<< Unauthenticated >>,DENIED,no-object-ref,
+GET,community,http://127.0.0.1:8888/community,/community,,alice,UNKNOWN,unseeded-container-node,
+GET,community,http://127.0.0.1:8888/community,/community,,bob,UNKNOWN,unseeded-container-node,
+GET,community,http://127.0.0.1:8888/community,/community,,carol,UNKNOWN,unseeded-container-node,
+GET,community,http://127.0.0.1:8888/community,/community,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/community/api,/community/api,,alice,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/community/api,/community/api,,bob,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/community/api,/community/api,,carol,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/community/api,/community/api,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,v2,http://127.0.0.1:8888/community/api/v2,/community/api/v2,,alice,UNKNOWN,unseeded-container-node,
+GET,v2,http://127.0.0.1:8888/community/api/v2,/community/api/v2,,bob,UNKNOWN,unseeded-container-node,
+GET,v2,http://127.0.0.1:8888/community/api/v2,/community/api/v2,,carol,UNKNOWN,unseeded-container-node,
+GET,v2,http://127.0.0.1:8888/community/api/v2,/community/api/v2,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,community,http://127.0.0.1:8888/community/api/v2/community,/community/api/v2/community,,alice,UNKNOWN,unseeded-container-node,
+GET,community,http://127.0.0.1:8888/community/api/v2/community,/community/api/v2/community,,bob,UNKNOWN,unseeded-container-node,
+GET,community,http://127.0.0.1:8888/community/api/v2/community,/community/api/v2/community,,carol,UNKNOWN,unseeded-container-node,
+GET,community,http://127.0.0.1:8888/community/api/v2/community,/community/api/v2/community,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,posts,http://127.0.0.1:8888/community/api/v2/community/posts,/community/api/v2/community/posts,,alice,UNKNOWN,unseeded-container-node,
+GET,posts,http://127.0.0.1:8888/community/api/v2/community/posts,/community/api/v2/community/posts,,bob,UNKNOWN,unseeded-container-node,
+GET,posts,http://127.0.0.1:8888/community/api/v2/community/posts,/community/api/v2/community/posts,,carol,UNKNOWN,unseeded-container-node,
+GET,posts,http://127.0.0.1:8888/community/api/v2/community/posts,/community/api/v2/community/posts,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,alice,ALLOWED,public-endpoint,no
+GET,A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,bob,ALLOWED,public-endpoint,no
+GET,A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,carol,ALLOWED,public-endpoint,no
+GET,A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,<< Unauthenticated >>,DENIED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG/comment,/community/api/v2/community/posts/{postId}/comment,A3PrAj72bxvcDWCDoZ5cGG,alice,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG/comment,/community/api/v2/community/posts/{postId}/comment,A3PrAj72bxvcDWCDoZ5cGG,bob,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG/comment,/community/api/v2/community/posts/{postId}/comment,A3PrAj72bxvcDWCDoZ5cGG,carol,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG/comment,/community/api/v2/community/posts/{postId}/comment,A3PrAj72bxvcDWCDoZ5cGG,<< Unauthenticated >>,DENIED,public-endpoint,no
+GET,GET:A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,alice,ALLOWED,public-endpoint,no
+GET,GET:A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,bob,ALLOWED,public-endpoint,no
+GET,GET:A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,carol,ALLOWED,public-endpoint,no
+GET,GET:A3PrAj72bxvcDWCDoZ5cGG,http://127.0.0.1:8888/community/api/v2/community/posts/A3PrAj72bxvcDWCDoZ5cGG,/community/api/v2/community/posts/{postId},A3PrAj72bxvcDWCDoZ5cGG,<< Unauthenticated >>,DENIED,public-endpoint,no
+GET,CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,alice,ALLOWED,public-endpoint,no
+GET,CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,bob,ALLOWED,public-endpoint,no
+GET,CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,carol,ALLOWED,public-endpoint,no
+GET,CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,<< Unauthenticated >>,DENIED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG/comment,/community/api/v2/community/posts/{postId}/comment,CBSVK3D3WFegKi464RoqnG,alice,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG/comment,/community/api/v2/community/posts/{postId}/comment,CBSVK3D3WFegKi464RoqnG,bob,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG/comment,/community/api/v2/community/posts/{postId}/comment,CBSVK3D3WFegKi464RoqnG,carol,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG/comment,/community/api/v2/community/posts/{postId}/comment,CBSVK3D3WFegKi464RoqnG,<< Unauthenticated >>,DENIED,public-endpoint,no
+GET,GET:CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,alice,ALLOWED,public-endpoint,no
+GET,GET:CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,bob,ALLOWED,public-endpoint,no
+GET,GET:CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,carol,ALLOWED,public-endpoint,no
+GET,GET:CBSVK3D3WFegKi464RoqnG,http://127.0.0.1:8888/community/api/v2/community/posts/CBSVK3D3WFegKi464RoqnG,/community/api/v2/community/posts/{postId},CBSVK3D3WFegKi464RoqnG,<< Unauthenticated >>,DENIED,public-endpoint,no
+GET,DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,alice,ALLOWED,public-endpoint,no
+GET,DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,bob,ALLOWED,public-endpoint,no
+GET,DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,carol,ALLOWED,public-endpoint,no
+GET,DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,<< Unauthenticated >>,DENIED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W/comment,/community/api/v2/community/posts/{postId}/comment,DvDozYzPrTSN8ZFh6mC82W,alice,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W/comment,/community/api/v2/community/posts/{postId}/comment,DvDozYzPrTSN8ZFh6mC82W,bob,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W/comment,/community/api/v2/community/posts/{postId}/comment,DvDozYzPrTSN8ZFh6mC82W,carol,ALLOWED,public-endpoint,no
+POST,POST:comment()({content}),http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W/comment,/community/api/v2/community/posts/{postId}/comment,DvDozYzPrTSN8ZFh6mC82W,<< Unauthenticated >>,DENIED,public-endpoint,no
+GET,GET:DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,alice,ALLOWED,public-endpoint,no
+GET,GET:DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,bob,ALLOWED,public-endpoint,no
+GET,GET:DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,carol,ALLOWED,public-endpoint,no
+GET,GET:DvDozYzPrTSN8ZFh6mC82W,http://127.0.0.1:8888/community/api/v2/community/posts/DvDozYzPrTSN8ZFh6mC82W,/community/api/v2/community/posts/{postId},DvDozYzPrTSN8ZFh6mC82W,<< Unauthenticated >>,DENIED,public-endpoint,no
+GET,"GET:recent(limit,offset)",http://127.0.0.1:8888/community/api/v2/community/posts/recent?limit=30&offset=0,/community/api/v2/community/posts/recent,,alice,UNKNOWN,unseeded-container-node,
+GET,"GET:recent(limit,offset)",http://127.0.0.1:8888/community/api/v2/community/posts/recent?limit=30&offset=0,/community/api/v2/community/posts/recent,,bob,UNKNOWN,unseeded-container-node,
+GET,"GET:recent(limit,offset)",http://127.0.0.1:8888/community/api/v2/community/posts/recent?limit=30&offset=0,/community/api/v2/community/posts/recent,,carol,UNKNOWN,unseeded-container-node,
+GET,"GET:recent(limit,offset)",http://127.0.0.1:8888/community/api/v2/community/posts/recent?limit=30&offset=0,/community/api/v2/community/posts/recent,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,identity,http://127.0.0.1:8888/identity,/identity,,alice,UNKNOWN,unseeded-container-node,
+GET,identity,http://127.0.0.1:8888/identity,/identity,,bob,UNKNOWN,unseeded-container-node,
+GET,identity,http://127.0.0.1:8888/identity,/identity,,carol,UNKNOWN,unseeded-container-node,
+GET,identity,http://127.0.0.1:8888/identity,/identity,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/identity/api,/identity/api,,alice,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/identity/api,/identity/api,,bob,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/identity/api,/identity/api,,carol,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/identity/api,/identity/api,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,auth,http://127.0.0.1:8888/identity/api/auth,/identity/api/auth,,alice,UNKNOWN,unseeded-container-node,
+GET,auth,http://127.0.0.1:8888/identity/api/auth,/identity/api/auth,,bob,UNKNOWN,unseeded-container-node,
+GET,auth,http://127.0.0.1:8888/identity/api/auth,/identity/api/auth,,carol,UNKNOWN,unseeded-container-node,
+GET,auth,http://127.0.0.1:8888/identity/api/auth,/identity/api/auth,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+POST,POST:login,http://127.0.0.1:8888/identity/api/auth/login,/identity/api/auth/login,,alice,ALLOWED,public-endpoint,
+POST,POST:login,http://127.0.0.1:8888/identity/api/auth/login,/identity/api/auth/login,,bob,ALLOWED,public-endpoint,
+POST,POST:login,http://127.0.0.1:8888/identity/api/auth/login,/identity/api/auth/login,,carol,ALLOWED,public-endpoint,
+POST,POST:login,http://127.0.0.1:8888/identity/api/auth/login,/identity/api/auth/login,,<< Unauthenticated >>,ALLOWED,public-endpoint,
+POST,POST:verify,http://127.0.0.1:8888/identity/api/auth/verify,/identity/api/auth/verify,,alice,ALLOWED,no-object-ref,
+POST,POST:verify,http://127.0.0.1:8888/identity/api/auth/verify,/identity/api/auth/verify,,bob,ALLOWED,no-object-ref,
+POST,POST:verify,http://127.0.0.1:8888/identity/api/auth/verify,/identity/api/auth/verify,,carol,ALLOWED,no-object-ref,
+POST,POST:verify,http://127.0.0.1:8888/identity/api/auth/verify,/identity/api/auth/verify,,<< Unauthenticated >>,DENIED,no-object-ref,
+GET,v2,http://127.0.0.1:8888/identity/api/v2,/identity/api/v2,,alice,UNKNOWN,unseeded-container-node,
+GET,v2,http://127.0.0.1:8888/identity/api/v2,/identity/api/v2,,bob,UNKNOWN,unseeded-container-node,
+GET,v2,http://127.0.0.1:8888/identity/api/v2,/identity/api/v2,,carol,UNKNOWN,unseeded-container-node,
+GET,v2,http://127.0.0.1:8888/identity/api/v2,/identity/api/v2,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,user,http://127.0.0.1:8888/identity/api/v2/user,/identity/api/v2/user,,alice,UNKNOWN,unseeded-container-node,
+GET,user,http://127.0.0.1:8888/identity/api/v2/user,/identity/api/v2/user,,bob,UNKNOWN,unseeded-container-node,
+GET,user,http://127.0.0.1:8888/identity/api/v2/user,/identity/api/v2/user,,carol,UNKNOWN,unseeded-container-node,
+GET,user,http://127.0.0.1:8888/identity/api/v2/user,/identity/api/v2/user,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:dashboard,http://127.0.0.1:8888/identity/api/v2/user/dashboard,/identity/api/v2/user/dashboard,,alice,ALLOWED,noref-role-only,
+GET,GET:dashboard,http://127.0.0.1:8888/identity/api/v2/user/dashboard,/identity/api/v2/user/dashboard,,bob,ALLOWED,noref-role-only,
+GET,GET:dashboard,http://127.0.0.1:8888/identity/api/v2/user/dashboard,/identity/api/v2/user/dashboard,,carol,ALLOWED,noref-role-only,
+GET,GET:dashboard,http://127.0.0.1:8888/identity/api/v2/user/dashboard,/identity/api/v2/user/dashboard,,<< Unauthenticated >>,DENIED,noref-role-only,
+GET,videos,http://127.0.0.1:8888/identity/api/v2/user/videos,/identity/api/v2/user/videos,,alice,UNKNOWN,unseeded-container-node,
+GET,videos,http://127.0.0.1:8888/identity/api/v2/user/videos,/identity/api/v2/user/videos,,bob,UNKNOWN,unseeded-container-node,
+GET,videos,http://127.0.0.1:8888/identity/api/v2/user/videos,/identity/api/v2/user/videos,,carol,UNKNOWN,unseeded-container-node,
+GET,videos,http://127.0.0.1:8888/identity/api/v2/user/videos,/identity/api/v2/user/videos,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:0,http://127.0.0.1:8888/identity/api/v2/user/videos/0,/identity/api/v2/user/videos/{id},0,alice,UNKNOWN,unlabeled-instance,
+GET,GET:0,http://127.0.0.1:8888/identity/api/v2/user/videos/0,/identity/api/v2/user/videos/{id},0,bob,UNKNOWN,unlabeled-instance,
+GET,GET:0,http://127.0.0.1:8888/identity/api/v2/user/videos/0,/identity/api/v2/user/videos/{id},0,carol,UNKNOWN,unlabeled-instance,
+GET,GET:0,http://127.0.0.1:8888/identity/api/v2/user/videos/0,/identity/api/v2/user/videos/{id},0,<< Unauthenticated >>,UNKNOWN,unlabeled-instance,
+GET,vehicle,http://127.0.0.1:8888/identity/api/v2/vehicle,/identity/api/v2/vehicle,,alice,UNKNOWN,unseeded-container-node,
+GET,vehicle,http://127.0.0.1:8888/identity/api/v2/vehicle,/identity/api/v2/vehicle,,bob,UNKNOWN,unseeded-container-node,
+GET,vehicle,http://127.0.0.1:8888/identity/api/v2/vehicle,/identity/api/v2/vehicle,,carol,UNKNOWN,unseeded-container-node,
+GET,vehicle,http://127.0.0.1:8888/identity/api/v2/vehicle,/identity/api/v2/vehicle,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,4818581c-a2c6-4115-ba43-16a61073330a,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a,/identity/api/v2/vehicle/{uuid},4818581c-a2c6-4115-ba43-16a61073330a,alice,UNKNOWN,unseeded-container-node,
+GET,4818581c-a2c6-4115-ba43-16a61073330a,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a,/identity/api/v2/vehicle/{uuid},4818581c-a2c6-4115-ba43-16a61073330a,bob,UNKNOWN,unseeded-container-node,
+GET,4818581c-a2c6-4115-ba43-16a61073330a,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a,/identity/api/v2/vehicle/{uuid},4818581c-a2c6-4115-ba43-16a61073330a,carol,UNKNOWN,unseeded-container-node,
+GET,4818581c-a2c6-4115-ba43-16a61073330a,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a,/identity/api/v2/vehicle/{uuid},4818581c-a2c6-4115-ba43-16a61073330a,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a/location,/identity/api/v2/vehicle/{uuid}/location,4818581c-a2c6-4115-ba43-16a61073330a,alice,DENIED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a/location,/identity/api/v2/vehicle/{uuid}/location,4818581c-a2c6-4115-ba43-16a61073330a,bob,DENIED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a/location,/identity/api/v2/vehicle/{uuid}/location,4818581c-a2c6-4115-ba43-16a61073330a,carol,ALLOWED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/4818581c-a2c6-4115-ba43-16a61073330a/location,/identity/api/v2/vehicle/{uuid}/location,4818581c-a2c6-4115-ba43-16a61073330a,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,56b739aa-7f85-4dbb-8d79-0c31051d6677,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677,/identity/api/v2/vehicle/{uuid},56b739aa-7f85-4dbb-8d79-0c31051d6677,alice,UNKNOWN,unseeded-container-node,
+GET,56b739aa-7f85-4dbb-8d79-0c31051d6677,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677,/identity/api/v2/vehicle/{uuid},56b739aa-7f85-4dbb-8d79-0c31051d6677,bob,UNKNOWN,unseeded-container-node,
+GET,56b739aa-7f85-4dbb-8d79-0c31051d6677,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677,/identity/api/v2/vehicle/{uuid},56b739aa-7f85-4dbb-8d79-0c31051d6677,carol,UNKNOWN,unseeded-container-node,
+GET,56b739aa-7f85-4dbb-8d79-0c31051d6677,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677,/identity/api/v2/vehicle/{uuid},56b739aa-7f85-4dbb-8d79-0c31051d6677,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677/location,/identity/api/v2/vehicle/{uuid}/location,56b739aa-7f85-4dbb-8d79-0c31051d6677,alice,ALLOWED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677/location,/identity/api/v2/vehicle/{uuid}/location,56b739aa-7f85-4dbb-8d79-0c31051d6677,bob,DENIED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677/location,/identity/api/v2/vehicle/{uuid}/location,56b739aa-7f85-4dbb-8d79-0c31051d6677,carol,DENIED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/56b739aa-7f85-4dbb-8d79-0c31051d6677/location,/identity/api/v2/vehicle/{uuid}/location,56b739aa-7f85-4dbb-8d79-0c31051d6677,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,c52858a6-3743-4d7f-9e76-669215d30fe9,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9,/identity/api/v2/vehicle/{uuid},c52858a6-3743-4d7f-9e76-669215d30fe9,alice,UNKNOWN,unseeded-container-node,
+GET,c52858a6-3743-4d7f-9e76-669215d30fe9,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9,/identity/api/v2/vehicle/{uuid},c52858a6-3743-4d7f-9e76-669215d30fe9,bob,UNKNOWN,unseeded-container-node,
+GET,c52858a6-3743-4d7f-9e76-669215d30fe9,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9,/identity/api/v2/vehicle/{uuid},c52858a6-3743-4d7f-9e76-669215d30fe9,carol,UNKNOWN,unseeded-container-node,
+GET,c52858a6-3743-4d7f-9e76-669215d30fe9,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9,/identity/api/v2/vehicle/{uuid},c52858a6-3743-4d7f-9e76-669215d30fe9,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9/location,/identity/api/v2/vehicle/{uuid}/location,c52858a6-3743-4d7f-9e76-669215d30fe9,alice,DENIED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9/location,/identity/api/v2/vehicle/{uuid}/location,c52858a6-3743-4d7f-9e76-669215d30fe9,bob,ALLOWED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9/location,/identity/api/v2/vehicle/{uuid}/location,c52858a6-3743-4d7f-9e76-669215d30fe9,carol,DENIED,labeled-instance,yes
+GET,GET:location,http://127.0.0.1:8888/identity/api/v2/vehicle/c52858a6-3743-4d7f-9e76-669215d30fe9/location,/identity/api/v2/vehicle/{uuid}/location,c52858a6-3743-4d7f-9e76-669215d30fe9,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:vehicles,http://127.0.0.1:8888/identity/api/v2/vehicle/vehicles,/identity/api/v2/vehicle/vehicles,,alice,ALLOWED,no-object-ref,
+GET,GET:vehicles,http://127.0.0.1:8888/identity/api/v2/vehicle/vehicles,/identity/api/v2/vehicle/vehicles,,bob,ALLOWED,no-object-ref,
+GET,GET:vehicles,http://127.0.0.1:8888/identity/api/v2/vehicle/vehicles,/identity/api/v2/vehicle/vehicles,,carol,ALLOWED,no-object-ref,
+GET,GET:vehicles,http://127.0.0.1:8888/identity/api/v2/vehicle/vehicles,/identity/api/v2/vehicle/vehicles,,<< Unauthenticated >>,DENIED,no-object-ref,
+GET,workshop,http://127.0.0.1:8888/workshop,/workshop,,alice,UNKNOWN,unseeded-container-node,
+GET,workshop,http://127.0.0.1:8888/workshop,/workshop,,bob,UNKNOWN,unseeded-container-node,
+GET,workshop,http://127.0.0.1:8888/workshop,/workshop,,carol,UNKNOWN,unseeded-container-node,
+GET,workshop,http://127.0.0.1:8888/workshop,/workshop,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/workshop/api,/workshop/api,,alice,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/workshop/api,/workshop/api,,bob,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/workshop/api,/workshop/api,,carol,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8888/workshop/api,/workshop/api,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,alice,ALLOWED,noref-role-only,
+GET,GET:mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,bob,ALLOWED,noref-role-only,
+GET,GET:mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,carol,ALLOWED,noref-role-only,
+GET,GET:mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,<< Unauthenticated >>,DENIED,noref-role-only,
+GET,mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,alice,ALLOWED,noref-role-only,
+GET,mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,bob,ALLOWED,noref-role-only,
+GET,mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,carol,ALLOWED,noref-role-only,
+GET,mechanic,http://127.0.0.1:8888/workshop/api/mechanic,/workshop/api/mechanic,,<< Unauthenticated >>,DENIED,noref-role-only,
+GET,GET:/,http://127.0.0.1:8888/workshop/api/mechanic/,/workshop/api/mechanic,,alice,ALLOWED,noref-role-only,
+GET,GET:/,http://127.0.0.1:8888/workshop/api/mechanic/,/workshop/api/mechanic,,bob,ALLOWED,noref-role-only,
+GET,GET:/,http://127.0.0.1:8888/workshop/api/mechanic/,/workshop/api/mechanic,,carol,ALLOWED,noref-role-only,
+GET,GET:/,http://127.0.0.1:8888/workshop/api/mechanic/,/workshop/api/mechanic,,<< Unauthenticated >>,DENIED,noref-role-only,
+GET,GET:download_report(filename),http://127.0.0.1:8888/workshop/api/mechanic/download_report?filename=report_8,/workshop/api/mechanic/download_report,report_8,alice,UNKNOWN,unseeded-container-node,yes
+GET,GET:download_report(filename),http://127.0.0.1:8888/workshop/api/mechanic/download_report?filename=report_8,/workshop/api/mechanic/download_report,report_8,bob,UNKNOWN,unseeded-container-node,yes
+GET,GET:download_report(filename),http://127.0.0.1:8888/workshop/api/mechanic/download_report?filename=report_8,/workshop/api/mechanic/download_report,report_8,carol,UNKNOWN,unseeded-container-node,yes
+GET,GET:download_report(filename),http://127.0.0.1:8888/workshop/api/mechanic/download_report?filename=report_8,/workshop/api/mechanic/download_report,report_8,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,yes
+GET,GET:mechanic_report(report_id),http://127.0.0.1:8888/workshop/api/mechanic/mechanic_report?report_id=8,/workshop/api/mechanic/mechanic_report,8,alice,UNKNOWN,unseeded-container-node,yes
+GET,GET:mechanic_report(report_id),http://127.0.0.1:8888/workshop/api/mechanic/mechanic_report?report_id=8,/workshop/api/mechanic/mechanic_report,8,bob,UNKNOWN,unseeded-container-node,yes
+GET,GET:mechanic_report(report_id),http://127.0.0.1:8888/workshop/api/mechanic/mechanic_report?report_id=8,/workshop/api/mechanic/mechanic_report,8,carol,UNKNOWN,unseeded-container-node,yes
+GET,GET:mechanic_report(report_id),http://127.0.0.1:8888/workshop/api/mechanic/mechanic_report?report_id=8,/workshop/api/mechanic/mechanic_report,8,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,yes
+GET,service_request,http://127.0.0.1:8888/workshop/api/mechanic/service_request,/workshop/api/mechanic/service_request,,alice,UNKNOWN,unseeded-container-node,
+GET,service_request,http://127.0.0.1:8888/workshop/api/mechanic/service_request,/workshop/api/mechanic/service_request,,bob,UNKNOWN,unseeded-container-node,
+GET,service_request,http://127.0.0.1:8888/workshop/api/mechanic/service_request,/workshop/api/mechanic/service_request,,carol,UNKNOWN,unseeded-container-node,
+GET,service_request,http://127.0.0.1:8888/workshop/api/mechanic/service_request,/workshop/api/mechanic/service_request,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,alice,ALLOWED,labeled-instance,yes
+GET,6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,bob,DENIED,labeled-instance,yes
+GET,6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,carol,DENIED,labeled-instance,yes
+GET,6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6/comment,/workshop/api/mechanic/service_request/{id}/comment,6,alice,ALLOWED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6/comment,/workshop/api/mechanic/service_request/{id}/comment,6,bob,DENIED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6/comment,/workshop/api/mechanic/service_request/{id}/comment,6,carol,DENIED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6/comment,/workshop/api/mechanic/service_request/{id}/comment,6,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,alice,ALLOWED,labeled-instance,yes
+GET,GET:6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,bob,DENIED,labeled-instance,yes
+GET,GET:6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,carol,DENIED,labeled-instance,yes
+GET,GET:6,http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PUT,PUT:6()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,alice,ALLOWED,labeled-instance,yes
+PUT,PUT:6()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,bob,DENIED,labeled-instance,yes
+PUT,PUT:6()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,carol,DENIED,labeled-instance,yes
+PUT,PUT:6()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/6,/workshop/api/mechanic/service_request/{id},6,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,alice,DENIED,labeled-instance,yes
+GET,7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,bob,ALLOWED,labeled-instance,yes
+GET,7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,carol,DENIED,labeled-instance,yes
+GET,7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7/comment,/workshop/api/mechanic/service_request/{id}/comment,7,alice,DENIED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7/comment,/workshop/api/mechanic/service_request/{id}/comment,7,bob,ALLOWED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7/comment,/workshop/api/mechanic/service_request/{id}/comment,7,carol,DENIED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7/comment,/workshop/api/mechanic/service_request/{id}/comment,7,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,alice,DENIED,labeled-instance,yes
+GET,GET:7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,bob,ALLOWED,labeled-instance,yes
+GET,GET:7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,carol,DENIED,labeled-instance,yes
+GET,GET:7,http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PUT,PUT:7()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,alice,DENIED,labeled-instance,yes
+PUT,PUT:7()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,bob,ALLOWED,labeled-instance,yes
+PUT,PUT:7()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,carol,DENIED,labeled-instance,yes
+PUT,PUT:7()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/7,/workshop/api/mechanic/service_request/{id},7,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,alice,DENIED,labeled-instance,yes
+GET,8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,bob,DENIED,labeled-instance,yes
+GET,8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,carol,ALLOWED,labeled-instance,yes
+GET,8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8/comment,/workshop/api/mechanic/service_request/{id}/comment,8,alice,DENIED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8/comment,/workshop/api/mechanic/service_request/{id}/comment,8,bob,DENIED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8/comment,/workshop/api/mechanic/service_request/{id}/comment,8,carol,ALLOWED,labeled-instance,no
+GET,GET:comment,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8/comment,/workshop/api/mechanic/service_request/{id}/comment,8,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,alice,DENIED,labeled-instance,yes
+GET,GET:8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,bob,DENIED,labeled-instance,yes
+GET,GET:8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,carol,ALLOWED,labeled-instance,yes
+GET,GET:8,http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PUT,PUT:8()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,alice,DENIED,labeled-instance,yes
+PUT,PUT:8()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,bob,DENIED,labeled-instance,yes
+PUT,PUT:8()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,carol,ALLOWED,labeled-instance,yes
+PUT,PUT:8()({status}),http://127.0.0.1:8888/workshop/api/mechanic/service_request/8,/workshop/api/mechanic/service_request/{id},8,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,merchant,http://127.0.0.1:8888/workshop/api/merchant,/workshop/api/merchant,,alice,UNKNOWN,unseeded-container-node,
+GET,merchant,http://127.0.0.1:8888/workshop/api/merchant,/workshop/api/merchant,,bob,UNKNOWN,unseeded-container-node,
+GET,merchant,http://127.0.0.1:8888/workshop/api/merchant,/workshop/api/merchant,,carol,UNKNOWN,unseeded-container-node,
+GET,merchant,http://127.0.0.1:8888/workshop/api/merchant,/workshop/api/merchant,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,service_requests,http://127.0.0.1:8888/workshop/api/merchant/service_requests,/workshop/api/merchant/service_requests,,alice,UNKNOWN,unseeded-container-node,
+GET,service_requests,http://127.0.0.1:8888/workshop/api/merchant/service_requests,/workshop/api/merchant/service_requests,,bob,UNKNOWN,unseeded-container-node,
+GET,service_requests,http://127.0.0.1:8888/workshop/api/merchant/service_requests,/workshop/api/merchant/service_requests,,carol,UNKNOWN,unseeded-container-node,
+GET,service_requests,http://127.0.0.1:8888/workshop/api/merchant/service_requests,/workshop/api/merchant/service_requests,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:11ZU9TJW463655KZ1,http://127.0.0.1:8888/workshop/api/merchant/service_requests/11ZU9TJW463655KZ1,/workshop/api/merchant/service_requests/{vin},11ZU9TJW463655KZ1,alice,DENIED,labeled-instance,yes
+GET,GET:11ZU9TJW463655KZ1,http://127.0.0.1:8888/workshop/api/merchant/service_requests/11ZU9TJW463655KZ1,/workshop/api/merchant/service_requests/{vin},11ZU9TJW463655KZ1,bob,DENIED,labeled-instance,yes
+GET,GET:11ZU9TJW463655KZ1,http://127.0.0.1:8888/workshop/api/merchant/service_requests/11ZU9TJW463655KZ1,/workshop/api/merchant/service_requests/{vin},11ZU9TJW463655KZ1,carol,ALLOWED,labeled-instance,yes
+GET,GET:11ZU9TJW463655KZ1,http://127.0.0.1:8888/workshop/api/merchant/service_requests/11ZU9TJW463655KZ1,/workshop/api/merchant/service_requests/{vin},11ZU9TJW463655KZ1,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:3XXT60864E93Z0BS4,http://127.0.0.1:8888/workshop/api/merchant/service_requests/3XXT60864E93Z0BS4,/workshop/api/merchant/service_requests/{vin},3XXT60864E93Z0BS4,alice,DENIED,labeled-instance,yes
+GET,GET:3XXT60864E93Z0BS4,http://127.0.0.1:8888/workshop/api/merchant/service_requests/3XXT60864E93Z0BS4,/workshop/api/merchant/service_requests/{vin},3XXT60864E93Z0BS4,bob,ALLOWED,labeled-instance,yes
+GET,GET:3XXT60864E93Z0BS4,http://127.0.0.1:8888/workshop/api/merchant/service_requests/3XXT60864E93Z0BS4,/workshop/api/merchant/service_requests/{vin},3XXT60864E93Z0BS4,carol,DENIED,labeled-instance,yes
+GET,GET:3XXT60864E93Z0BS4,http://127.0.0.1:8888/workshop/api/merchant/service_requests/3XXT60864E93Z0BS4,/workshop/api/merchant/service_requests/{vin},3XXT60864E93Z0BS4,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:9N6L4W48LEC91XD38,http://127.0.0.1:8888/workshop/api/merchant/service_requests/9N6L4W48LEC91XD38,/workshop/api/merchant/service_requests/{vin},9N6L4W48LEC91XD38,alice,ALLOWED,labeled-instance,yes
+GET,GET:9N6L4W48LEC91XD38,http://127.0.0.1:8888/workshop/api/merchant/service_requests/9N6L4W48LEC91XD38,/workshop/api/merchant/service_requests/{vin},9N6L4W48LEC91XD38,bob,DENIED,labeled-instance,yes
+GET,GET:9N6L4W48LEC91XD38,http://127.0.0.1:8888/workshop/api/merchant/service_requests/9N6L4W48LEC91XD38,/workshop/api/merchant/service_requests/{vin},9N6L4W48LEC91XD38,carol,DENIED,labeled-instance,yes
+GET,GET:9N6L4W48LEC91XD38,http://127.0.0.1:8888/workshop/api/merchant/service_requests/9N6L4W48LEC91XD38,/workshop/api/merchant/service_requests/{vin},9N6L4W48LEC91XD38,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,shop,http://127.0.0.1:8888/workshop/api/shop,/workshop/api/shop,,alice,UNKNOWN,unseeded-container-node,
+GET,shop,http://127.0.0.1:8888/workshop/api/shop,/workshop/api/shop,,bob,UNKNOWN,unseeded-container-node,
+GET,shop,http://127.0.0.1:8888/workshop/api/shop,/workshop/api/shop,,carol,UNKNOWN,unseeded-container-node,
+GET,shop,http://127.0.0.1:8888/workshop/api/shop,/workshop/api/shop,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,orders,http://127.0.0.1:8888/workshop/api/shop/orders,/workshop/api/shop/orders,,alice,UNKNOWN,unseeded-container-node,
+GET,orders,http://127.0.0.1:8888/workshop/api/shop/orders,/workshop/api/shop/orders,,bob,UNKNOWN,unseeded-container-node,
+GET,orders,http://127.0.0.1:8888/workshop/api/shop/orders,/workshop/api/shop/orders,,carol,UNKNOWN,unseeded-container-node,
+GET,orders,http://127.0.0.1:8888/workshop/api/shop/orders,/workshop/api/shop/orders,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:10,http://127.0.0.1:8888/workshop/api/shop/orders/10,/workshop/api/shop/orders/{id},10,alice,DENIED,labeled-instance,yes
+GET,GET:10,http://127.0.0.1:8888/workshop/api/shop/orders/10,/workshop/api/shop/orders/{id},10,bob,DENIED,labeled-instance,yes
+GET,GET:10,http://127.0.0.1:8888/workshop/api/shop/orders/10,/workshop/api/shop/orders/{id},10,carol,ALLOWED,labeled-instance,yes
+GET,GET:10,http://127.0.0.1:8888/workshop/api/shop/orders/10,/workshop/api/shop/orders/{id},10,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:11,http://127.0.0.1:8888/workshop/api/shop/orders/11,/workshop/api/shop/orders/{id},11,alice,DENIED,labeled-instance,yes
+GET,GET:11,http://127.0.0.1:8888/workshop/api/shop/orders/11,/workshop/api/shop/orders/{id},11,bob,DENIED,labeled-instance,yes
+GET,GET:11,http://127.0.0.1:8888/workshop/api/shop/orders/11,/workshop/api/shop/orders/{id},11,carol,ALLOWED,labeled-instance,yes
+GET,GET:11,http://127.0.0.1:8888/workshop/api/shop/orders/11,/workshop/api/shop/orders/{id},11,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:6,http://127.0.0.1:8888/workshop/api/shop/orders/6,/workshop/api/shop/orders/{id},6,alice,ALLOWED,labeled-instance,yes
+GET,GET:6,http://127.0.0.1:8888/workshop/api/shop/orders/6,/workshop/api/shop/orders/{id},6,bob,DENIED,labeled-instance,yes
+GET,GET:6,http://127.0.0.1:8888/workshop/api/shop/orders/6,/workshop/api/shop/orders/{id},6,carol,DENIED,labeled-instance,yes
+GET,GET:6,http://127.0.0.1:8888/workshop/api/shop/orders/6,/workshop/api/shop/orders/{id},6,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:7,http://127.0.0.1:8888/workshop/api/shop/orders/7,/workshop/api/shop/orders/{id},7,alice,ALLOWED,labeled-instance,yes
+GET,GET:7,http://127.0.0.1:8888/workshop/api/shop/orders/7,/workshop/api/shop/orders/{id},7,bob,DENIED,labeled-instance,yes
+GET,GET:7,http://127.0.0.1:8888/workshop/api/shop/orders/7,/workshop/api/shop/orders/{id},7,carol,DENIED,labeled-instance,yes
+GET,GET:7,http://127.0.0.1:8888/workshop/api/shop/orders/7,/workshop/api/shop/orders/{id},7,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:8,http://127.0.0.1:8888/workshop/api/shop/orders/8,/workshop/api/shop/orders/{id},8,alice,DENIED,labeled-instance,yes
+GET,GET:8,http://127.0.0.1:8888/workshop/api/shop/orders/8,/workshop/api/shop/orders/{id},8,bob,ALLOWED,labeled-instance,yes
+GET,GET:8,http://127.0.0.1:8888/workshop/api/shop/orders/8,/workshop/api/shop/orders/{id},8,carol,DENIED,labeled-instance,yes
+GET,GET:8,http://127.0.0.1:8888/workshop/api/shop/orders/8,/workshop/api/shop/orders/{id},8,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:9,http://127.0.0.1:8888/workshop/api/shop/orders/9,/workshop/api/shop/orders/{id},9,alice,DENIED,labeled-instance,yes
+GET,GET:9,http://127.0.0.1:8888/workshop/api/shop/orders/9,/workshop/api/shop/orders/{id},9,bob,ALLOWED,labeled-instance,yes
+GET,GET:9,http://127.0.0.1:8888/workshop/api/shop/orders/9,/workshop/api/shop/orders/{id},9,carol,DENIED,labeled-instance,yes
+GET,GET:9,http://127.0.0.1:8888/workshop/api/shop/orders/9,/workshop/api/shop/orders/{id},9,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,"GET:all(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/orders/all?limit=30&offset=0,/workshop/api/shop/orders/all,,alice,UNKNOWN,unseeded-container-node,
+GET,"GET:all(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/orders/all?limit=30&offset=0,/workshop/api/shop/orders/all,,bob,UNKNOWN,unseeded-container-node,
+GET,"GET:all(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/orders/all?limit=30&offset=0,/workshop/api/shop/orders/all,,carol,UNKNOWN,unseeded-container-node,
+GET,"GET:all(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/orders/all?limit=30&offset=0,/workshop/api/shop/orders/all,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:null,http://127.0.0.1:8888/workshop/api/shop/orders/null,/workshop/api/shop/orders/null,,alice,ALLOWED,no-object-ref,
+GET,GET:null,http://127.0.0.1:8888/workshop/api/shop/orders/null,/workshop/api/shop/orders/null,,bob,ALLOWED,no-object-ref,
+GET,GET:null,http://127.0.0.1:8888/workshop/api/shop/orders/null,/workshop/api/shop/orders/null,,carol,ALLOWED,no-object-ref,
+GET,GET:null,http://127.0.0.1:8888/workshop/api/shop/orders/null,/workshop/api/shop/orders/null,,<< Unauthenticated >>,DENIED,no-object-ref,
+GET,"GET:products(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/products?limit=30&offset=0,/workshop/api/shop/products,,alice,UNKNOWN,unseeded-container-node,
+GET,"GET:products(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/products?limit=30&offset=0,/workshop/api/shop/products,,bob,UNKNOWN,unseeded-container-node,
+GET,"GET:products(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/products?limit=30&offset=0,/workshop/api/shop/products,,carol,UNKNOWN,unseeded-container-node,
+GET,"GET:products(limit,offset)",http://127.0.0.1:8888/workshop/api/shop/products?limit=30&offset=0,/workshop/api/shop/products,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,

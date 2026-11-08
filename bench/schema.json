@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/example/bola-bench/schema.json",
+  "title": "BOLA benchmark label (object-instance granularity)",
+  "description": "标注单位 = (method, path_template, victim_object_ids)。同一个端点在不同对象实例上可以既漏洞又不漏洞，因此端点级标注不充分（见 docs/pilot_findings.md §5）。",
+  "type": "object",
+  "required": [
+    "id",
+    "system",
+    "method",
+    "path",
+    "victim",
+    "object_ids",
+    "vulnerable"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "全局唯一，建议 <system>-<seq>，如 crapi-0001"
+    },
+    "system": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string",
+      "enum": [
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE",
+        "HEAD",
+        "OPTIONS"
+      ]
+    },
+    "path": {
+      "type": "string",
+      "description": "归一化模板：数字段替换为 {id}，UUID 替换为 {uuid}，系统声明的其它标识形态替换为对应名字（如 {vin} / {postId} / {serviceId} 归一为 {id}）。例：/workshop/api/shop/orders/{id}"
+    },
+    "victim": {
+      "type": "string",
+      "description": "资源所属账号名"
+    },
+    "object_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "请求路径/查询参数中出现的具体对象标识，按出现顺序。例：[\"6\"] 或 [\"1\",\"1002\"]"
+    },
+    "object_type": {
+      "type": "string",
+      "description": "业务对象类型，如 order / user / vehicle / post"
+    },
+    "request_path": {
+      "type": "string",
+      "description": "人类可读的具体请求路径，例：/workshop/api/shop/orders/6"
+    },
+    "vulnerable": {
+      "type": "boolean",
+      "description": "true = 非属主访问应被判定为漏洞；false = 安全对照组（任何报警都是误报）"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "L1",
+        "L2",
+        "L3"
+      ]
+    },
+    "vuln_kind": {
+      "type": "string",
+      "enum": [
+        "read",
+        "write",
+        "delete",
+        "none"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "same_tenant",
+        "cross_tenant",
+        "any"
+      ],
+      "default": "any",
+      "description": "该标注适用于哪一类攻击者。取 any 表示判定与攻击者租户无关（当前 71 条全部为 any）：跨租户不是靠标注区分，而是由重放层对每个种子同时用同租户与跨租户攻击者重放，见 §II-B"
+    },
+    "oracle": {
+      "type": "object",
+      "description": "该实例的判定依据；缺省时使用系统级默认判据",
+      "properties": {
+        "must_contain": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expect_status": {
+          "type": "integer"
+        },
+        "victim_marker": {
+          "type": "string",
+          "description": "受害者响应中唯一可识别的值，如 alice@example.com"
+        }
+      }
+    },
+    "discovered_by": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "tool",
+        "cve"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "control_kind": {
+      "type": "string",
+      "enum": [
+        "owner_check",
+        "method_not_allowed",
+        "public_resource",
+        "ignored_identifier",
+        "no_owner_evidence"
+      ],
+      "description": "仅 vulnerable=false 时必填：这条安全对照的成因。用于统计\"误报是在哪一类对照上产生的\"，见 docs/labeling_spec.md §5"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "private",
+        "public",
+        "role_scoped"
+      ],
+      "default": "private",
+      "description": "资源可见性：private=仅属主/授权方；public=所有登录用户可见（读他人不算越权）；role_scoped=特定角色可见"
+    }
+  }
+}

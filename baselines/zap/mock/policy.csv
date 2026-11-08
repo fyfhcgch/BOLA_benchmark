@@ -1,0 +1,237 @@
+method,node_name,uri,template,object_ids,user,rule,policy_source,label_vulnerable
+GET,http://127.0.0.1:8765,http://127.0.0.1:8765,/,,alice,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:8765,http://127.0.0.1:8765,/,,bob,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:8765,http://127.0.0.1:8765,/,,carol,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:8765,http://127.0.0.1:8765,/,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8765/,/,,alice,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8765/,/,,bob,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8765/,/,,carol,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:8765/,/,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8765/api,/api,,alice,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8765/api,/api,,bob,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8765/api,/api,,carol,UNKNOWN,unseeded-container-node,
+GET,api,http://127.0.0.1:8765/api,/api,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,documents,http://127.0.0.1:8765/api/documents,/api/documents,,alice,UNKNOWN,unseeded-container-node,
+GET,documents,http://127.0.0.1:8765/api/documents,/api/documents,,bob,UNKNOWN,unseeded-container-node,
+GET,documents,http://127.0.0.1:8765/api/documents,/api/documents,,carol,UNKNOWN,unseeded-container-node,
+GET,documents,http://127.0.0.1:8765/api/documents,/api/documents,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,alice,ALLOWED,labeled-instance,no
+GET,GET:a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,bob,DENIED,labeled-instance,no
+GET,GET:a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,carol,DENIED,labeled-instance,no
+GET,GET:a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,alice,ALLOWED,labeled-instance,no
+GET,a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,bob,DENIED,labeled-instance,no
+GET,a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,carol,DENIED,labeled-instance,no
+GET,a1b2c3d4-0001-4000-8000-000000000001,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001,/api/documents/{uuid},a1b2c3d4-0001-4000-8000-000000000001,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001/trash,/api/documents/{uuid}/trash,a1b2c3d4-0001-4000-8000-000000000001,alice,ALLOWED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001/trash,/api/documents/{uuid}/trash,a1b2c3d4-0001-4000-8000-000000000001,bob,DENIED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001/trash,/api/documents/{uuid}/trash,a1b2c3d4-0001-4000-8000-000000000001,carol,DENIED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0001-4000-8000-000000000001/trash,/api/documents/{uuid}/trash,a1b2c3d4-0001-4000-8000-000000000001,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,alice,UNKNOWN,unlabeled-instance,
+GET,GET:a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,bob,UNKNOWN,unlabeled-instance,
+GET,GET:a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,carol,UNKNOWN,unlabeled-instance,
+GET,GET:a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,<< Unauthenticated >>,UNKNOWN,unlabeled-instance,
+GET,a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,alice,UNKNOWN,unlabeled-instance,
+GET,a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,bob,UNKNOWN,unlabeled-instance,
+GET,a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,carol,UNKNOWN,unlabeled-instance,
+GET,a1b2c3d4-0002-4000-8000-000000000002,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002,/api/documents/{uuid},a1b2c3d4-0002-4000-8000-000000000002,<< Unauthenticated >>,UNKNOWN,unlabeled-instance,
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002/trash,/api/documents/{uuid}/trash,a1b2c3d4-0002-4000-8000-000000000002,alice,ALLOWED,labeled-instance,no
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002/trash,/api/documents/{uuid}/trash,a1b2c3d4-0002-4000-8000-000000000002,bob,DENIED,labeled-instance,no
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002/trash,/api/documents/{uuid}/trash,a1b2c3d4-0002-4000-8000-000000000002,carol,DENIED,labeled-instance,no
+GET,GET:trash,http://127.0.0.1:8765/api/documents/a1b2c3d4-0002-4000-8000-000000000002/trash,/api/documents/{uuid}/trash,a1b2c3d4-0002-4000-8000-000000000002,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,alice,DENIED,labeled-instance,no
+GET,GET:b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,bob,ALLOWED,labeled-instance,no
+GET,GET:b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,carol,DENIED,labeled-instance,no
+GET,GET:b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,alice,DENIED,labeled-instance,no
+GET,b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,bob,ALLOWED,labeled-instance,no
+GET,b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,carol,DENIED,labeled-instance,no
+GET,b1b2c3d4-0003-4000-8000-000000000003,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003,/api/documents/{uuid},b1b2c3d4-0003-4000-8000-000000000003,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003/trash,/api/documents/{uuid}/trash,b1b2c3d4-0003-4000-8000-000000000003,alice,DENIED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003/trash,/api/documents/{uuid}/trash,b1b2c3d4-0003-4000-8000-000000000003,bob,ALLOWED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003/trash,/api/documents/{uuid}/trash,b1b2c3d4-0003-4000-8000-000000000003,carol,DENIED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0003-4000-8000-000000000003/trash,/api/documents/{uuid}/trash,b1b2c3d4-0003-4000-8000-000000000003,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,alice,UNKNOWN,unlabeled-instance,
+GET,GET:b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,bob,UNKNOWN,unlabeled-instance,
+GET,GET:b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,carol,UNKNOWN,unlabeled-instance,
+GET,GET:b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,<< Unauthenticated >>,UNKNOWN,unlabeled-instance,
+GET,b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,alice,UNKNOWN,unlabeled-instance,
+GET,b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,bob,UNKNOWN,unlabeled-instance,
+GET,b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,carol,UNKNOWN,unlabeled-instance,
+GET,b1b2c3d4-0004-4000-8000-000000000004,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004,/api/documents/{uuid},b1b2c3d4-0004-4000-8000-000000000004,<< Unauthenticated >>,UNKNOWN,unlabeled-instance,
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004/trash,/api/documents/{uuid}/trash,b1b2c3d4-0004-4000-8000-000000000004,alice,UNKNOWN,unlabeled-instance,
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004/trash,/api/documents/{uuid}/trash,b1b2c3d4-0004-4000-8000-000000000004,bob,UNKNOWN,unlabeled-instance,
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004/trash,/api/documents/{uuid}/trash,b1b2c3d4-0004-4000-8000-000000000004,carol,UNKNOWN,unlabeled-instance,
+GET,GET:trash,http://127.0.0.1:8765/api/documents/b1b2c3d4-0004-4000-8000-000000000004/trash,/api/documents/{uuid}/trash,b1b2c3d4-0004-4000-8000-000000000004,<< Unauthenticated >>,UNKNOWN,unlabeled-instance,
+GET,GET:c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,alice,DENIED,labeled-instance,no
+GET,GET:c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,bob,DENIED,labeled-instance,no
+GET,GET:c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,carol,ALLOWED,labeled-instance,no
+GET,GET:c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,alice,DENIED,labeled-instance,no
+GET,c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,bob,DENIED,labeled-instance,no
+GET,c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,carol,ALLOWED,labeled-instance,no
+GET,c1b2c3d4-0005-4000-8000-000000000005,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005,/api/documents/{uuid},c1b2c3d4-0005-4000-8000-000000000005,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:trash,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005/trash,/api/documents/{uuid}/trash,c1b2c3d4-0005-4000-8000-000000000005,alice,DENIED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005/trash,/api/documents/{uuid}/trash,c1b2c3d4-0005-4000-8000-000000000005,bob,DENIED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005/trash,/api/documents/{uuid}/trash,c1b2c3d4-0005-4000-8000-000000000005,carol,ALLOWED,labeled-instance,yes
+GET,GET:trash,http://127.0.0.1:8765/api/documents/c1b2c3d4-0005-4000-8000-000000000005/trash,/api/documents/{uuid}/trash,c1b2c3d4-0005-4000-8000-000000000005,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:me,http://127.0.0.1:8765/api/me,/api/me,,alice,ALLOWED,noref-role-only,
+GET,GET:me,http://127.0.0.1:8765/api/me,/api/me,,bob,ALLOWED,noref-role-only,
+GET,GET:me,http://127.0.0.1:8765/api/me,/api/me,,carol,ALLOWED,noref-role-only,
+GET,GET:me,http://127.0.0.1:8765/api/me,/api/me,,<< Unauthenticated >>,DENIED,noref-role-only,
+GET,orders,http://127.0.0.1:8765/api/orders,/api/orders,,alice,UNKNOWN,unseeded-container-node,
+GET,orders,http://127.0.0.1:8765/api/orders,/api/orders,,bob,UNKNOWN,unseeded-container-node,
+GET,orders,http://127.0.0.1:8765/api/orders,/api/orders,,carol,UNKNOWN,unseeded-container-node,
+GET,orders,http://127.0.0.1:8765/api/orders,/api/orders,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,alice,ALLOWED,labeled-instance,yes
+GET,1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,bob,DENIED,labeled-instance,yes
+GET,1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,carol,DENIED,labeled-instance,yes
+GET,1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:items,http://127.0.0.1:8765/api/orders/1001/items,/api/orders/{id}/items,1001,alice,ALLOWED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1001/items,/api/orders/{id}/items,1001,bob,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1001/items,/api/orders/{id}/items,1001,carol,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1001/items,/api/orders/{id}/items,1001,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,alice,ALLOWED,labeled-instance,yes
+GET,GET:1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,bob,DENIED,labeled-instance,yes
+GET,GET:1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,carol,DENIED,labeled-instance,yes
+GET,GET:1001,http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PATCH,PATCH:1001()({note}),http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,alice,ALLOWED,labeled-instance,yes
+PATCH,PATCH:1001()({note}),http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,bob,DENIED,labeled-instance,yes
+PATCH,PATCH:1001()({note}),http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,carol,DENIED,labeled-instance,yes
+PATCH,PATCH:1001()({note}),http://127.0.0.1:8765/api/orders/1001,/api/orders/{id},1001,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,alice,ALLOWED,labeled-instance,yes
+GET,1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,bob,DENIED,labeled-instance,yes
+GET,1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,carol,DENIED,labeled-instance,yes
+GET,1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:items,http://127.0.0.1:8765/api/orders/1002/items,/api/orders/{id}/items,1002,alice,ALLOWED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1002/items,/api/orders/{id}/items,1002,bob,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1002/items,/api/orders/{id}/items,1002,carol,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1002/items,/api/orders/{id}/items,1002,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,alice,ALLOWED,labeled-instance,yes
+GET,GET:1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,bob,DENIED,labeled-instance,yes
+GET,GET:1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,carol,DENIED,labeled-instance,yes
+GET,GET:1002,http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PATCH,PATCH:1002()({note}),http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,alice,ALLOWED,labeled-instance,yes
+PATCH,PATCH:1002()({note}),http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,bob,DENIED,labeled-instance,yes
+PATCH,PATCH:1002()({note}),http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,carol,DENIED,labeled-instance,yes
+PATCH,PATCH:1002()({note}),http://127.0.0.1:8765/api/orders/1002,/api/orders/{id},1002,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,alice,DENIED,labeled-instance,yes
+GET,1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,bob,ALLOWED,labeled-instance,yes
+GET,1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,carol,DENIED,labeled-instance,yes
+GET,1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:items,http://127.0.0.1:8765/api/orders/1003/items,/api/orders/{id}/items,1003,alice,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1003/items,/api/orders/{id}/items,1003,bob,ALLOWED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1003/items,/api/orders/{id}/items,1003,carol,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1003/items,/api/orders/{id}/items,1003,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,alice,DENIED,labeled-instance,yes
+GET,GET:1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,bob,ALLOWED,labeled-instance,yes
+GET,GET:1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,carol,DENIED,labeled-instance,yes
+GET,GET:1003,http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PATCH,PATCH:1003()({note}),http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,alice,DENIED,labeled-instance,yes
+PATCH,PATCH:1003()({note}),http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,bob,ALLOWED,labeled-instance,yes
+PATCH,PATCH:1003()({note}),http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,carol,DENIED,labeled-instance,yes
+PATCH,PATCH:1003()({note}),http://127.0.0.1:8765/api/orders/1003,/api/orders/{id},1003,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,alice,DENIED,labeled-instance,yes
+GET,1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,bob,ALLOWED,labeled-instance,yes
+GET,1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,carol,DENIED,labeled-instance,yes
+GET,1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:items,http://127.0.0.1:8765/api/orders/1004/items,/api/orders/{id}/items,1004,alice,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1004/items,/api/orders/{id}/items,1004,bob,ALLOWED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1004/items,/api/orders/{id}/items,1004,carol,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1004/items,/api/orders/{id}/items,1004,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,alice,DENIED,labeled-instance,yes
+GET,GET:1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,bob,ALLOWED,labeled-instance,yes
+GET,GET:1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,carol,DENIED,labeled-instance,yes
+GET,GET:1004,http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PATCH,PATCH:1004()({note}),http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,alice,DENIED,labeled-instance,yes
+PATCH,PATCH:1004()({note}),http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,bob,ALLOWED,labeled-instance,yes
+PATCH,PATCH:1004()({note}),http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,carol,DENIED,labeled-instance,yes
+PATCH,PATCH:1004()({note}),http://127.0.0.1:8765/api/orders/1004,/api/orders/{id},1004,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,alice,DENIED,labeled-instance,yes
+GET,1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,bob,DENIED,labeled-instance,yes
+GET,1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,carol,ALLOWED,labeled-instance,yes
+GET,1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:items,http://127.0.0.1:8765/api/orders/1005/items,/api/orders/{id}/items,1005,alice,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1005/items,/api/orders/{id}/items,1005,bob,DENIED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1005/items,/api/orders/{id}/items,1005,carol,ALLOWED,labeled-instance,no
+GET,GET:items,http://127.0.0.1:8765/api/orders/1005/items,/api/orders/{id}/items,1005,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,alice,DENIED,labeled-instance,yes
+GET,GET:1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,bob,DENIED,labeled-instance,yes
+GET,GET:1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,carol,ALLOWED,labeled-instance,yes
+GET,GET:1005,http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,<< Unauthenticated >>,DENIED,labeled-instance,yes
+PATCH,PATCH:1005()({note}),http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,alice,DENIED,labeled-instance,yes
+PATCH,PATCH:1005()({note}),http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,bob,DENIED,labeled-instance,yes
+PATCH,PATCH:1005()({note}),http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,carol,ALLOWED,labeled-instance,yes
+PATCH,PATCH:1005()({note}),http://127.0.0.1:8765/api/orders/1005,/api/orders/{id},1005,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,batch,http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,,alice,UNKNOWN,unseeded-container-node,
+GET,batch,http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,,bob,UNKNOWN,unseeded-container-node,
+GET,batch,http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,,carol,UNKNOWN,unseeded-container-node,
+GET,batch,http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+POST,POST:mine()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch/mine,/api/orders/batch/mine,1001|1002,alice,ALLOWED,labeled-instance,no
+POST,POST:mine()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch/mine,/api/orders/batch/mine,1001|1002,bob,DENIED,labeled-instance,no
+POST,POST:mine()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch/mine,/api/orders/batch/mine,1001|1002,carol,DENIED,labeled-instance,no
+POST,POST:mine()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch/mine,/api/orders/batch/mine,1001|1002,<< Unauthenticated >>,DENIED,labeled-instance,no
+POST,POST:batch()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,1001|1002,alice,ALLOWED,labeled-instance,yes
+POST,POST:batch()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,1001|1002,bob,DENIED,labeled-instance,yes
+POST,POST:batch()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,1001|1002,carol,DENIED,labeled-instance,yes
+POST,POST:batch()({ids:[{}..]}),http://127.0.0.1:8765/api/orders/batch,/api/orders/batch,1001|1002,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,export,http://127.0.0.1:8765/api/orders/export,/api/orders/export,,alice,UNKNOWN,unseeded-container-node,
+GET,export,http://127.0.0.1:8765/api/orders/export,/api/orders/export,,bob,UNKNOWN,unseeded-container-node,
+GET,export,http://127.0.0.1:8765/api/orders/export,/api/orders/export,,carol,UNKNOWN,unseeded-container-node,
+GET,export,http://127.0.0.1:8765/api/orders/export,/api/orders/export,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:mine(ids),http://127.0.0.1:8765/api/orders/export/mine?ids=1005,/api/orders/export/mine,1005,alice,UNKNOWN,unseeded-container-node,no
+GET,GET:mine(ids),http://127.0.0.1:8765/api/orders/export/mine?ids=1005,/api/orders/export/mine,1005,bob,UNKNOWN,unseeded-container-node,no
+GET,GET:mine(ids),http://127.0.0.1:8765/api/orders/export/mine?ids=1005,/api/orders/export/mine,1005,carol,UNKNOWN,unseeded-container-node,no
+GET,GET:mine(ids),http://127.0.0.1:8765/api/orders/export/mine?ids=1005,/api/orders/export/mine,1005,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,no
+GET,GET:export(ids),http://127.0.0.1:8765/api/orders/export?ids=1005,/api/orders/export,1005,alice,UNKNOWN,unseeded-container-node,yes
+GET,GET:export(ids),http://127.0.0.1:8765/api/orders/export?ids=1005,/api/orders/export,1005,bob,UNKNOWN,unseeded-container-node,yes
+GET,GET:export(ids),http://127.0.0.1:8765/api/orders/export?ids=1005,/api/orders/export,1005,carol,UNKNOWN,unseeded-container-node,yes
+GET,GET:export(ids),http://127.0.0.1:8765/api/orders/export?ids=1005,/api/orders/export,1005,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,yes
+GET,GET:products,http://127.0.0.1:8765/api/products,/api/products,,alice,ALLOWED,public-endpoint,
+GET,GET:products,http://127.0.0.1:8765/api/products,/api/products,,bob,ALLOWED,public-endpoint,
+GET,GET:products,http://127.0.0.1:8765/api/products,/api/products,,carol,ALLOWED,public-endpoint,
+GET,GET:products,http://127.0.0.1:8765/api/products,/api/products,,<< Unauthenticated >>,DENIED,public-endpoint,
+GET,profile,http://127.0.0.1:8765/api/profile,/api/profile,,alice,UNKNOWN,unseeded-container-node,
+GET,profile,http://127.0.0.1:8765/api/profile,/api/profile,,bob,UNKNOWN,unseeded-container-node,
+GET,profile,http://127.0.0.1:8765/api/profile,/api/profile,,carol,UNKNOWN,unseeded-container-node,
+GET,profile,http://127.0.0.1:8765/api/profile,/api/profile,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:1,http://127.0.0.1:8765/api/profile/1,/api/profile/{id},1,alice,ALLOWED,labeled-instance,no
+GET,GET:1,http://127.0.0.1:8765/api/profile/1,/api/profile/{id},1,bob,DENIED,labeled-instance,no
+GET,GET:1,http://127.0.0.1:8765/api/profile/1,/api/profile/{id},1,carol,DENIED,labeled-instance,no
+GET,GET:1,http://127.0.0.1:8765/api/profile/1,/api/profile/{id},1,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:2,http://127.0.0.1:8765/api/profile/2,/api/profile/{id},2,alice,DENIED,labeled-instance,no
+GET,GET:2,http://127.0.0.1:8765/api/profile/2,/api/profile/{id},2,bob,ALLOWED,labeled-instance,no
+GET,GET:2,http://127.0.0.1:8765/api/profile/2,/api/profile/{id},2,carol,DENIED,labeled-instance,no
+GET,GET:2,http://127.0.0.1:8765/api/profile/2,/api/profile/{id},2,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,GET:3,http://127.0.0.1:8765/api/profile/3,/api/profile/{id},3,alice,DENIED,labeled-instance,no
+GET,GET:3,http://127.0.0.1:8765/api/profile/3,/api/profile/{id},3,bob,DENIED,labeled-instance,no
+GET,GET:3,http://127.0.0.1:8765/api/profile/3,/api/profile/{id},3,carol,ALLOWED,labeled-instance,no
+GET,GET:3,http://127.0.0.1:8765/api/profile/3,/api/profile/{id},3,<< Unauthenticated >>,DENIED,labeled-instance,no
+GET,users,http://127.0.0.1:8765/api/users,/api/users,,alice,UNKNOWN,unseeded-container-node,
+GET,users,http://127.0.0.1:8765/api/users,/api/users,,bob,UNKNOWN,unseeded-container-node,
+GET,users,http://127.0.0.1:8765/api/users,/api/users,,carol,UNKNOWN,unseeded-container-node,
+GET,users,http://127.0.0.1:8765/api/users,/api/users,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,1,http://127.0.0.1:8765/api/users/1,/api/users/{id},1,alice,UNKNOWN,unseeded-container-node,
+GET,1,http://127.0.0.1:8765/api/users/1,/api/users/{id},1,bob,UNKNOWN,unseeded-container-node,
+GET,1,http://127.0.0.1:8765/api/users/1,/api/users/{id},1,carol,UNKNOWN,unseeded-container-node,
+GET,1,http://127.0.0.1:8765/api/users/1,/api/users/{id},1,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:orders,http://127.0.0.1:8765/api/users/1/orders,/api/users/{id}/orders,1,alice,ALLOWED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/1/orders,/api/users/{id}/orders,1,bob,DENIED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/1/orders,/api/users/{id}/orders,1,carol,DENIED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/1/orders,/api/users/{id}/orders,1,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,2,http://127.0.0.1:8765/api/users/2,/api/users/{id},2,alice,UNKNOWN,unseeded-container-node,
+GET,2,http://127.0.0.1:8765/api/users/2,/api/users/{id},2,bob,UNKNOWN,unseeded-container-node,
+GET,2,http://127.0.0.1:8765/api/users/2,/api/users/{id},2,carol,UNKNOWN,unseeded-container-node,
+GET,2,http://127.0.0.1:8765/api/users/2,/api/users/{id},2,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:orders,http://127.0.0.1:8765/api/users/2/orders,/api/users/{id}/orders,2,alice,DENIED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/2/orders,/api/users/{id}/orders,2,bob,ALLOWED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/2/orders,/api/users/{id}/orders,2,carol,DENIED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/2/orders,/api/users/{id}/orders,2,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,3,http://127.0.0.1:8765/api/users/3,/api/users/{id},3,alice,UNKNOWN,unseeded-container-node,
+GET,3,http://127.0.0.1:8765/api/users/3,/api/users/{id},3,bob,UNKNOWN,unseeded-container-node,
+GET,3,http://127.0.0.1:8765/api/users/3,/api/users/{id},3,carol,UNKNOWN,unseeded-container-node,
+GET,3,http://127.0.0.1:8765/api/users/3,/api/users/{id},3,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:orders,http://127.0.0.1:8765/api/users/3/orders,/api/users/{id}/orders,3,alice,DENIED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/3/orders,/api/users/{id}/orders,3,bob,DENIED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/3/orders,/api/users/{id}/orders,3,carol,ALLOWED,labeled-instance,yes
+GET,GET:orders,http://127.0.0.1:8765/api/users/3/orders,/api/users/{id}/orders,3,<< Unauthenticated >>,DENIED,labeled-instance,yes

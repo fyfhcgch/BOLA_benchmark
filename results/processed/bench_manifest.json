@@ -1,0 +1,103 @@
+{
+  "bench_version": "v0.1-pilot",
+  "files": {
+    "mock.jsonl": {
+      "sha256": "51784998d37fbbff833d1e5a3ff1e8c35cc0f2e9a1f23fa472d209e2c5e0be9f",
+      "bytes": 24442,
+      "lines": 50
+    },
+    "mock.noref.jsonl": {
+      "sha256": "8c446348c6cbd6b180521f5c41f6fdaad7b91b9a0c94f196ac9d6a1ce4c3133c",
+      "bytes": 245,
+      "lines": 2
+    },
+    "crapi.jsonl": {
+      "sha256": "a9866c4d34ff2ecff2e4c15811bac7190c4d8610feee5e36cfe605e46b9b1a7b",
+      "bytes": 25868,
+      "lines": 45
+    },
+    "crapi.noref.jsonl": {
+      "sha256": "ab7cfe32f60eda78510a6f0a85d2fd9840e118ba80284fb2243a387ea17d8d47",
+      "bytes": 372,
+      "lines": 4
+    },
+    "vampi.jsonl": {
+      "sha256": "8228095c564f42274f44fc07fd4b704f403bec4427e00c4c48b9698f52248a4c",
+      "bytes": 6435,
+      "lines": 12
+    },
+    "vampi.noref.jsonl": {
+      "sha256": "3798b01d2da50be6bae5028dd508b480dcd1b34da4a817b1c35cd7f8aaa8f753",
+      "bytes": 455,
+      "lines": 4
+    },
+    "clean.jsonl": {
+      "sha256": "4186c2d9b7f51bd8196f8628d85e091f2115416fd17a2954f1efe29b06f17126",
+      "bytes": 28346,
+      "lines": 53
+    },
+    "clean.noref.jsonl": {
+      "sha256": "8d2af4129e8a0f493169987f53a5d92f01c818c3cd24a7b4ce00fe0b52ba29a0",
+      "bytes": 183,
+      "lines": 3
+    }
+  },
+  "totals": {
+    "labels": 107,
+    "vuln": 62,
+    "safe": 45,
+    "endpoints": 30,
+    "templates": 23,
+    "object_types": [
+      "book",
+      "document",
+      "order",
+      "post",
+      "post_comment",
+      "service_report",
+      "service_report_meta",
+      "service_request",
+      "service_request_comment",
+      "user",
+      "vehicle"
+    ],
+    "noref": 10,
+    "difficulty": {
+      "L1": 36,
+      "L2": 43,
+      "L3": 28
+    },
+    "kind": {
+      "delete": 10,
+      "none": 45,
+      "read": 41,
+      "write": 11
+    },
+    "visibility": {
+      "private": 98,
+      "public": 9
+    },
+    "methods": {
+      "DELETE": 22,
+      "GET": 62,
+      "PATCH": 5,
+      "POST": 9,
+      "PUT": 9
+    },
+    "control_kind": {
+      "ignored_identifier": 3,
+      "method_not_allowed": 12,
+      "no_owner_evidence": 4,
+      "owner_check": 17,
+      "public_resource": 9
+    },
+    "vuln_by_kind": {
+      "delete": 10,
+      "read": 41,
+      "write": 11
+    },
+    "scope": {
+      "any": 107
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "frozen_at": "2026-11-03T11:29:50+00:00",
+  "scored_at": "2026-11-07T16:16:55+00:00",
+  "hold_hours": 72,
+  "frozen_sha256": "a60a3c01aafc61d2eb2231c9b218bbf82e35c1c6ef0a520a867052e31f0b5140",
+  "answers_sha256": "a5353b868078c342462c302c2134100c48a7b3631e8e195041f49e95503dfe5e",
+  "n_paired": 107,
+  "n_uncertain": 0,
+  "n_unfilled": 0,
+  "kappa": 0.9808,
+  "kappa_ci95": [
+    0.9399,
+    1.0
+  ],
+  "observed_agreement": 0.9907,
+  "expected_agreement": 0.5141,
+  "confusion": {
+    "both_vuln": 62,
+    "both_safe": 44,
+    "frozen_vuln_relabel_safe": 0,
+    "frozen_safe_relabel_vuln": 1
+  },
+  "difficulty_kappa": {
+    "n": 107,
+    "po": 0.785,
+    "pe": 0.3344,
+    "kappa": 0.6771
+  },
+  "control_kind_kappa": {
+    "n": 44,
+    "po": 1.0,
+    "pe": 0.2748,
+    "kappa": 1.0
+  },
+  "disagreements": [
+    {
+      "id": "mock-0047",
+      "system": "mock",
+      "method": "GET",
+      "path": "/api/documents/{uuid}/trash",
+      "object_ids": [
+        "a1b2c3d4-0002-4000-8000-000000000002"
+      ],
+      "victim": "alice",
+      "frozen": false,
+      "relabel": true,
+      "frozen_note": "L3 安全对照：同一回收站端点、未被删除的对象返回 {\"trash\": []}。与漏洞实例同模板不同对象 -> 只有实例级标注能区分，任何响应相似度判据在这里都会误报",
+      "relabel_note": "HTTP 200，响应出现受害者标识 ['alice']"
+    }
+  ]
+}

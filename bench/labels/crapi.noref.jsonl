@@ -1,0 +1,4 @@
+{"method": "GET", "path": "/identity/api/v2/user/dashboard", "note": "无对象标识"}
+{"method": "GET", "path": "/community/api/v2/community/posts/recent", "note": "列表端点，无对象标识"}
+{"method": "GET", "path": "/workshop/api/shop/orders/all", "note": "all 不是对象标识"}
+{"method": "GET", "path": "/workshop/api/mechanic", "note": "无对象标识"}

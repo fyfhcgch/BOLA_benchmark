@@ -1,0 +1,146 @@
+{
+  "rows": [
+    {
+      "system": "mock",
+      "display": "MockShop-vuln",
+      "labels": 50,
+      "labels_tested": 30,
+      "coverage": 0.6,
+      "tp": 17,
+      "fp": 2,
+      "fn": 0,
+      "tn": 11,
+      "precision": 0.8947,
+      "precision_defined": true,
+      "fp_rate": 0.1538,
+      "safe_tested": 13,
+      "recall": 1.0,
+      "recall_strict": 0.5312,
+      "f1": 0.9444,
+      "tests_skipped_owner": 25,
+      "self_read_alerts": 0,
+      "gate_violations": 0,
+      "fp_unlabeled": 0,
+      "ac_alerts": 38,
+      "ac_authz_alerts": 38,
+      "improper_auth_alerts": 0,
+      "rules_check": {
+        "ALLOWED": 44,
+        "DENIED": 116
+      },
+      "fixture": {
+        "before": "reset",
+        "after": "reset"
+      }
+    },
+    {
+      "system": "clean",
+      "display": "MockShop-secure",
+      "labels": 50,
+      "labels_tested": 25,
+      "coverage": 0.5,
+      "tp": 0,
+      "fp": 6,
+      "fn": 0,
+      "tn": 19,
+      "precision": 0.0,
+      "precision_defined": true,
+      "fp_rate": 0.24,
+      "safe_tested": 25,
+      "recall": 0.0,
+      "recall_strict": 0.0,
+      "f1": 0.0,
+      "tests_skipped_owner": 25,
+      "self_read_alerts": 0,
+      "gate_violations": 0,
+      "fp_unlabeled": 0,
+      "ac_alerts": 12,
+      "ac_authz_alerts": 12,
+      "improper_auth_alerts": 0,
+      "rules_check": {
+        "ALLOWED": 44,
+        "DENIED": 116
+      },
+      "fixture": {
+        "before": "reset",
+        "after": "reset"
+      }
+    },
+    {
+      "system": "crapi",
+      "display": "OWASP crAPI",
+      "labels": 45,
+      "labels_tested": 27,
+      "coverage": 0.6,
+      "tp": 18,
+      "fp": 3,
+      "fn": 0,
+      "tn": 6,
+      "precision": 0.8571,
+      "precision_defined": true,
+      "fp_rate": 0.3333,
+      "safe_tested": 9,
+      "recall": 1.0,
+      "recall_strict": 0.75,
+      "f1": 0.9231,
+      "tests_skipped_owner": 24,
+      "self_read_alerts": 0,
+      "gate_violations": 0,
+      "fp_unlabeled": 0,
+      "ac_alerts": 59,
+      "ac_authz_alerts": 42,
+      "improper_auth_alerts": 17,
+      "rules_check": {
+        "ALLOWED": 79,
+        "DENIED": 89
+      },
+      "fixture": {
+        "before": "no-reset-endpoint（crAPI/VAmPI 需要重跑 seed 脚本，见 systems/*/seed.py）",
+        "after": "no-reset-endpoint（crAPI/VAmPI 需要重跑 seed 脚本，见 systems/*/seed.py）"
+      }
+    },
+    {
+      "system": "vampi",
+      "display": "VAmPI",
+      "labels": 12,
+      "labels_tested": 12,
+      "coverage": 1.0,
+      "tp": 6,
+      "fp": 3,
+      "fn": 0,
+      "tn": 3,
+      "precision": 0.6667,
+      "precision_defined": true,
+      "fp_rate": 0.5,
+      "safe_tested": 6,
+      "recall": 1.0,
+      "recall_strict": 1.0,
+      "f1": 0.8,
+      "tests_skipped_owner": 12,
+      "self_read_alerts": 0,
+      "gate_violations": 0,
+      "fp_unlabeled": 0,
+      "ac_alerts": 18,
+      "ac_authz_alerts": 18,
+      "improper_auth_alerts": 0,
+      "rules_check": {
+        "ALLOWED": 36,
+        "DENIED": 28
+      },
+      "fixture": {
+        "before": "no-reset-endpoint（crAPI/VAmPI 需要重跑 seed 脚本，见 systems/*/seed.py）",
+        "after": "no-reset-endpoint（crAPI/VAmPI 需要重跑 seed 脚本，见 systems/*/seed.py）"
+      }
+    }
+  ],
+  "totals_over_vuln_systems": {
+    "labels_tested": 69,
+    "tp": 41,
+    "fp": 8,
+    "fn": 0,
+    "tn": 20,
+    "precision": 0.8367,
+    "recall": 1.0,
+    "f1": 0.9111
+  }
+}

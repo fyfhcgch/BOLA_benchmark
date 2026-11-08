@@ -1,0 +1,185 @@
+{
+  "system": "vampi",
+  "victim": "alice1",
+  "attackers": [
+    "bob2",
+    "carol3"
+  ],
+  "zap_version": "2.17.0",
+  "context": "bola-vampi",
+  "context_id": "3",
+  "user_ids": {
+    "alice1": "2810",
+    "bob2": "2811",
+    "carol3": "2812"
+  },
+  "seeded_urls": 13,
+  "urls_in_context": 19,
+  "site_nodes": 22,
+  "rules_injected": 64,
+  "rules_check": {
+    "ALLOWED": 36,
+    "DENIED": 28
+  },
+  "injected": {
+    "old_context_id": "2",
+    "context_id": "3",
+    "exported_bytes": 6451,
+    "rules_injected": 64
+  },
+  "scan": {
+    "status": "NOT RUNNING",
+    "progress": "100"
+  },
+  "by_user_results": {
+    "<< Unauthenticated >>": {
+      "Valid": 13,
+      "Unknown": 1
+    },
+    "alice1": {
+      "Invalid": 6,
+      "Valid": 7,
+      "Unknown": 1
+    },
+    "bob2": {
+      "Invalid": 6,
+      "Valid": 7,
+      "Unknown": 1
+    },
+    "carol3": {
+      "Valid": 7,
+      "Invalid": 6,
+      "Unknown": 1
+    }
+  },
+  "alerts_total": 41,
+  "ac_alerts": 18,
+  "ac_authz_alerts": 18,
+  "ac_alerts_by_name": {
+    "Access Control Issue - Improper Authorization": 18
+  },
+  "passive_alerts": 23,
+  "report_saved": true,
+  "fixture_before": "no-reset-endpoint（crAPI/VAmPI 需要重跑 seed 脚本，见 systems/*/seed.py）",
+  "fixture_after": "no-reset-endpoint（crAPI/VAmPI 需要重跑 seed 脚本，见 systems/*/seed.py）",
+  "notes": [
+    "newSession：每轮从空站点树/空告警开始"
+  ],
+  "score": {
+    "labels_total": 12,
+    "labels_tested": 12,
+    "labels_uncovered": 0,
+    "coverage": 1.0,
+    "tp": 6,
+    "fp": 3,
+    "fn": 0,
+    "tn": 3,
+    "fp_unlabeled": 0,
+    "gate_violations": 0,
+    "tests_total": 52,
+    "tests_skipped_owner": 12,
+    "self_read_alerts": 0,
+    "precision_defined": true,
+    "precision": 0.6667,
+    "fp_rate": 0.5,
+    "safe_tested": 6,
+    "recall": 1.0,
+    "recall_strict": 1.0,
+    "f1": 0.8,
+    "tp_keys": [
+      [
+        "GET",
+        "/books/v1/{bookTitle}",
+        [
+          "alice1-notebook"
+        ]
+      ],
+      [
+        "GET",
+        "/books/v1/{bookTitle}",
+        [
+          "bob2-notebook"
+        ]
+      ],
+      [
+        "PUT",
+        "/users/v1/{username}/password",
+        [
+          "alice1"
+        ]
+      ],
+      [
+        "PUT",
+        "/users/v1/{username}/password",
+        [
+          "carol3"
+        ]
+      ],
+      [
+        "GET",
+        "/books/v1/{bookTitle}",
+        [
+          "carol3-notebook"
+        ]
+      ],
+      [
+        "PUT",
+        "/users/v1/{username}/password",
+        [
+          "bob2"
+        ]
+      ]
+    ],
+    "fn_keys": [],
+    "tn_keys": [
+      [
+        "GET",
+        "/users/v1/{username}",
+        [
+          "carol3"
+        ]
+      ],
+      [
+        "GET",
+        "/users/v1/{username}",
+        [
+          "bob2"
+        ]
+      ],
+      [
+        "GET",
+        "/users/v1/{username}",
+        [
+          "alice1"
+        ]
+      ]
+    ],
+    "fp_labeled_keys": [
+      [
+        "PUT",
+        "/users/v1/{username}/email",
+        [
+          "bob2"
+        ]
+      ],
+      [
+        "PUT",
+        "/users/v1/{username}/email",
+        [
+          "alice1"
+        ]
+      ],
+      [
+        "PUT",
+        "/users/v1/{username}/email",
+        [
+          "carol3"
+        ]
+      ]
+    ],
+    "fp_unlabeled_records": [],
+    "gate_violation_records": [],
+    "uncovered_vuln_keys": []
+  },
+  "out": "baselines/zap/vampi"
+}

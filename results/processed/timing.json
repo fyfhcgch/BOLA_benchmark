@@ -1,0 +1,26 @@
+{
+  "source": "bench/time_replay.py（wall-clock，含进程启动与靶场重置）",
+  "rows": [
+    {
+      "system": "mock",
+      "seconds": 4.27,
+      "tests_total": 354
+    },
+    {
+      "system": "clean",
+      "seconds": 3.65,
+      "tests_total": 354
+    },
+    {
+      "system": "crapi",
+      "seconds": 18.68,
+      "tests_total": 282
+    },
+    {
+      "system": "vampi",
+      "seconds": 2.95,
+      "tests_total": 36
+    }
+  ],
+  "tests_total": 1026
+}

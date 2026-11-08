@@ -1,0 +1,89 @@
+method,node_name,uri,template,object_ids,user,rule,policy_source,label_vulnerable
+GET,http://127.0.0.1:5002,http://127.0.0.1:5002,/,,alice1,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:5002,http://127.0.0.1:5002,/,,bob2,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:5002,http://127.0.0.1:5002,/,,carol3,UNKNOWN,unseeded-container-node,
+GET,http://127.0.0.1:5002,http://127.0.0.1:5002,/,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:5002/,/,,alice1,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:5002/,/,,bob2,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:5002/,/,,carol3,UNKNOWN,unseeded-container-node,
+GET,GET:/,http://127.0.0.1:5002/,/,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,books,http://127.0.0.1:5002/books,/books,,alice1,UNKNOWN,unseeded-container-node,
+GET,books,http://127.0.0.1:5002/books,/books,,bob2,UNKNOWN,unseeded-container-node,
+GET,books,http://127.0.0.1:5002/books,/books,,carol3,UNKNOWN,unseeded-container-node,
+GET,books,http://127.0.0.1:5002/books,/books,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/books/v1,/books/v1,,alice1,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/books/v1,/books/v1,,bob2,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/books/v1,/books/v1,,carol3,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/books/v1,/books/v1,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:alice1-notebook,http://127.0.0.1:5002/books/v1/alice1-notebook,/books/v1/{bookTitle},alice1-notebook,alice1,ALLOWED,labeled-instance,yes
+GET,GET:alice1-notebook,http://127.0.0.1:5002/books/v1/alice1-notebook,/books/v1/{bookTitle},alice1-notebook,bob2,DENIED,labeled-instance,yes
+GET,GET:alice1-notebook,http://127.0.0.1:5002/books/v1/alice1-notebook,/books/v1/{bookTitle},alice1-notebook,carol3,DENIED,labeled-instance,yes
+GET,GET:alice1-notebook,http://127.0.0.1:5002/books/v1/alice1-notebook,/books/v1/{bookTitle},alice1-notebook,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:bob2-notebook,http://127.0.0.1:5002/books/v1/bob2-notebook,/books/v1/{bookTitle},bob2-notebook,alice1,DENIED,labeled-instance,yes
+GET,GET:bob2-notebook,http://127.0.0.1:5002/books/v1/bob2-notebook,/books/v1/{bookTitle},bob2-notebook,bob2,ALLOWED,labeled-instance,yes
+GET,GET:bob2-notebook,http://127.0.0.1:5002/books/v1/bob2-notebook,/books/v1/{bookTitle},bob2-notebook,carol3,DENIED,labeled-instance,yes
+GET,GET:bob2-notebook,http://127.0.0.1:5002/books/v1/bob2-notebook,/books/v1/{bookTitle},bob2-notebook,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:carol3-notebook,http://127.0.0.1:5002/books/v1/carol3-notebook,/books/v1/{bookTitle},carol3-notebook,alice1,DENIED,labeled-instance,yes
+GET,GET:carol3-notebook,http://127.0.0.1:5002/books/v1/carol3-notebook,/books/v1/{bookTitle},carol3-notebook,bob2,DENIED,labeled-instance,yes
+GET,GET:carol3-notebook,http://127.0.0.1:5002/books/v1/carol3-notebook,/books/v1/{bookTitle},carol3-notebook,carol3,ALLOWED,labeled-instance,yes
+GET,GET:carol3-notebook,http://127.0.0.1:5002/books/v1/carol3-notebook,/books/v1/{bookTitle},carol3-notebook,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:soft-del-probe,http://127.0.0.1:5002/books/v1/soft-del-probe,/books/v1/soft-del-probe,,alice1,ALLOWED,no-object-ref,
+GET,GET:soft-del-probe,http://127.0.0.1:5002/books/v1/soft-del-probe,/books/v1/soft-del-probe,,bob2,ALLOWED,no-object-ref,
+GET,GET:soft-del-probe,http://127.0.0.1:5002/books/v1/soft-del-probe,/books/v1/soft-del-probe,,carol3,ALLOWED,no-object-ref,
+GET,GET:soft-del-probe,http://127.0.0.1:5002/books/v1/soft-del-probe,/books/v1/soft-del-probe,,<< Unauthenticated >>,DENIED,no-object-ref,
+GET,users,http://127.0.0.1:5002/users,/users,,alice1,UNKNOWN,unseeded-container-node,
+GET,users,http://127.0.0.1:5002/users,/users,,bob2,UNKNOWN,unseeded-container-node,
+GET,users,http://127.0.0.1:5002/users,/users,,carol3,UNKNOWN,unseeded-container-node,
+GET,users,http://127.0.0.1:5002/users,/users,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/users/v1,/users/v1,,alice1,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/users/v1,/users/v1,,bob2,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/users/v1,/users/v1,,carol3,UNKNOWN,unseeded-container-node,
+GET,v1,http://127.0.0.1:5002/users/v1,/users/v1,,<< Unauthenticated >>,UNKNOWN,unseeded-container-node,
+GET,GET:alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,alice1,ALLOWED,public-endpoint,no
+GET,GET:alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,bob2,ALLOWED,public-endpoint,no
+GET,GET:alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,carol3,ALLOWED,public-endpoint,no
+GET,GET:alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,<< Unauthenticated >>,ALLOWED,public-endpoint,no
+GET,alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,alice1,ALLOWED,public-endpoint,no
+GET,alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,bob2,ALLOWED,public-endpoint,no
+GET,alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,carol3,ALLOWED,public-endpoint,no
+GET,alice1,http://127.0.0.1:5002/users/v1/alice1,/users/v1/{username},alice1,<< Unauthenticated >>,ALLOWED,public-endpoint,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/alice1/email,/users/v1/{username}/email,alice1,alice1,ALLOWED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/alice1/email,/users/v1/{username}/email,alice1,bob2,DENIED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/alice1/email,/users/v1/{username}/email,alice1,carol3,DENIED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/alice1/email,/users/v1/{username}/email,alice1,<< Unauthenticated >>,DENIED,labeled-instance,no
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/alice1/password,/users/v1/{username}/password,alice1,alice1,ALLOWED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/alice1/password,/users/v1/{username}/password,alice1,bob2,DENIED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/alice1/password,/users/v1/{username}/password,alice1,carol3,DENIED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/alice1/password,/users/v1/{username}/password,alice1,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,alice1,ALLOWED,public-endpoint,no
+GET,GET:bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,bob2,ALLOWED,public-endpoint,no
+GET,GET:bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,carol3,ALLOWED,public-endpoint,no
+GET,GET:bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,<< Unauthenticated >>,ALLOWED,public-endpoint,no
+GET,bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,alice1,ALLOWED,public-endpoint,no
+GET,bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,bob2,ALLOWED,public-endpoint,no
+GET,bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,carol3,ALLOWED,public-endpoint,no
+GET,bob2,http://127.0.0.1:5002/users/v1/bob2,/users/v1/{username},bob2,<< Unauthenticated >>,ALLOWED,public-endpoint,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/bob2/email,/users/v1/{username}/email,bob2,alice1,DENIED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/bob2/email,/users/v1/{username}/email,bob2,bob2,ALLOWED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/bob2/email,/users/v1/{username}/email,bob2,carol3,DENIED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/bob2/email,/users/v1/{username}/email,bob2,<< Unauthenticated >>,DENIED,labeled-instance,no
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/bob2/password,/users/v1/{username}/password,bob2,alice1,DENIED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/bob2/password,/users/v1/{username}/password,bob2,bob2,ALLOWED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/bob2/password,/users/v1/{username}/password,bob2,carol3,DENIED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/bob2/password,/users/v1/{username}/password,bob2,<< Unauthenticated >>,DENIED,labeled-instance,yes
+GET,GET:carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,alice1,ALLOWED,public-endpoint,no
+GET,GET:carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,bob2,ALLOWED,public-endpoint,no
+GET,GET:carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,carol3,ALLOWED,public-endpoint,no
+GET,GET:carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,<< Unauthenticated >>,ALLOWED,public-endpoint,no
+GET,carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,alice1,ALLOWED,public-endpoint,no
+GET,carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,bob2,ALLOWED,public-endpoint,no
+GET,carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,carol3,ALLOWED,public-endpoint,no
+GET,carol3,http://127.0.0.1:5002/users/v1/carol3,/users/v1/{username},carol3,<< Unauthenticated >>,ALLOWED,public-endpoint,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/carol3/email,/users/v1/{username}/email,carol3,alice1,DENIED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/carol3/email,/users/v1/{username}/email,carol3,bob2,DENIED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/carol3/email,/users/v1/{username}/email,carol3,carol3,ALLOWED,labeled-instance,no
+PUT,PUT:email()({email}),http://127.0.0.1:5002/users/v1/carol3/email,/users/v1/{username}/email,carol3,<< Unauthenticated >>,DENIED,labeled-instance,no
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/carol3/password,/users/v1/{username}/password,carol3,alice1,DENIED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/carol3/password,/users/v1/{username}/password,carol3,bob2,DENIED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/carol3/password,/users/v1/{username}/password,carol3,carol3,ALLOWED,labeled-instance,yes
+PUT,PUT:password()({password}),http://127.0.0.1:5002/users/v1/carol3/password,/users/v1/{username}/password,carol3,<< Unauthenticated >>,DENIED,labeled-instance,yes

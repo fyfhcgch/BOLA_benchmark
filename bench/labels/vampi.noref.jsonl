@@ -1,0 +1,4 @@
+{"method": "GET", "path": "/books/v1", "note": "书单只返回书名与作者，不含 secret；任何告警都是闸门失效"}
+{"method": "GET", "path": "/users/v1", "note": "用户列表是公开信息，无对象标识"}
+{"method": "GET", "path": "/users/v1/_debug", "note": "过度数据暴露（含明文密码），但不是对象级越权：无对象标识"}
+{"method": "GET", "path": "/me", "note": "只返回调用者自己，无对象标识"}
